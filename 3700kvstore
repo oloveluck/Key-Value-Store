@@ -24,7 +24,7 @@ class Server:
 	# communcation and event management objects
 	sock: socket.socket # socket
 	event_loop = None # asyncio loop
-	timeout = None # asyncio call_later object to handle timeout
+	timeout: asyncio.TimerHandle = None # asyncio call_later object to handle timeout
 
 	def __init__(self, my_id: int, replica_ids: List[int], sock: socket.socket):
 		self.id = my_id
@@ -33,41 +33,47 @@ class Server:
 		self.state: "follower"
 		self.event_loop = asyncio.get_event_loop()
 		self.sock = sock
-		self.event_loop.run_until_complete(self.event_loop.create_task(self.receive()))
 		self.startTimeout()
+		self.event_loop.create_task(self.receive())
 		self.event_loop.run_forever()
 		pass
 
 	async def receive(self):
-		while True:
-			msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
-			if len(msg_raw) == 0:
-				continue
+		msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
+		if len(msg_raw) == 0:
+			pass
+		else:
 			msg = json.loads(msg_raw)
 			# For now, ignore get() and put() from clients
 			if msg['type'] in ['get', 'put']:
-				print(msg)
+				pass
 			
 			# Handle noop messages. This may be removed from your final implementation
 			elif msg['type'] == 'noop':
 				print(f'{msg["dst"]} received a NOOP from {msg["src"]}')
 
+			elif msg['type'] == 'rv':
+				print(msg)
+		self.event_loop.create_task(self.receive())
 
-	async def startTimeout(self):
+
+	def startTimeout(self):
 		timeout = random.randint(150, 300) / 1000
 		if self.timeout != None: 
 			self.timeout.cancel()
 		self.timeout = self.event_loop.call_later(timeout, self.beginElection)
 
-	async def beginElection(self):
-		if DEBUG: print("Beginning Election on host " + self.id)
+	def beginElection(self):
+		print("Beginning Election on host " + self.id)
 		self.currentTerm += 1
-		requests = [self.event_loop.create_task() for replica_id in replica_ids]
+		requests = [self.event_loop.create_task(self.sendRVMessage(replica_id)) for replica_id in replica_ids]
+		asyncio.gather(*requests)
 		pass
 
-	async def sendRVMessage(self, message):
-		if DEBUG: print("Sending RequestVote message: " + message)
-		self.socket.send_all(message)
+	async def sendRVMessage(self, dest):
+		print("Sending RV Message")
+		message = {'src': self.id, 'dst': dest, 'leader': 'FFFF', 'type': 'rv' }
+		self.sock.sendall(json.dumps(message).encode())
 
 	async def appendEntries(self):
 		pass
