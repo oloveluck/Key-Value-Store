@@ -2,16 +2,16 @@
 
 import sys, socket, select, time, json, random, asyncio
 from typing import List
+
 DEBUG = True
 
 class LogEntry:
 	pass
 
-class Server(asyncio.Protocol):
+class Server:
 	# persistent data
 	id: int # id of this server
 	replica_ids: List[int] # replica ids
-	#sock: socket.socket # socket
 	currentTerm: int # current term of this server
 	log: List[LogEntry] # logentries
 	votedFor: int # who this server votedfor this term
@@ -22,34 +22,36 @@ class Server(asyncio.Protocol):
 	state: str # one of "follower", "leader", "candidate"
 
 	# communcation and event management objects
+	sock: socket.socket # socket
 	event_loop = None # asyncio loop
 	timeout = None # asyncio call_later object to handle timeout
-	transport = None # transport to use to send data to socket
 
-	def __init__(self, my_id: int, replica_ids: List[int]):
+	def __init__(self, my_id: int, replica_ids: List[int], sock: socket.socket):
 		self.id = my_id
 		self.replica_ids = replica_ids
 		self.currentTerm = self.commitIndex = self.lastApplied = 0
 		self.state: "follower"
 		self.event_loop = asyncio.get_event_loop()
+		self.sock = sock
+		self.event_loop.run_until_complete(self.event_loop.create_task(self.receive()))
 		self.startTimeout()
+		self.event_loop.run_forever()
 		pass
 
-	def connection_made(self, transport):
-		self.transport = transport
-		if DEBUG: print("Connection established")
+	async def receive(self):
+		while True:
+			msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
+			if len(msg_raw) == 0:
+				continue
+			msg = json.loads(msg_raw)
+			# For now, ignore get() and put() from clients
+			if msg['type'] in ['get', 'put']:
+				print(msg)
+			
+			# Handle noop messages. This may be removed from your final implementation
+			elif msg['type'] == 'noop':
+				print(f'{msg["dst"]} received a NOOP from {msg["src"]}')
 
-	def data_received(self, data):
-		msg = json.loads(data)
-		if DEBUG: print(msg)
-
-		# For now, ignore get() and put() from clients
-		if msg['type'] in ['get', 'put']:
-                        pass
-		
-		# Handle noop messages. This may be removed from your final implementation
-		elif msg['type'] == 'noop':
-			print(f'{msg["dst"]} received a NOOP from {msg["src"]}')
 
 	async def startTimeout(self):
 		timeout = random.randint(150, 300) / 1000
@@ -60,12 +62,12 @@ class Server(asyncio.Protocol):
 	async def beginElection(self):
 		if DEBUG: print("Beginning Election on host " + self.id)
 		self.currentTerm += 1
-		reqests = [self.event_loop.create_task() for replica_id in replica_ids]
+		requests = [self.event_loop.create_task() for replica_id in replica_ids]
 		pass
 
 	async def sendRVMessage(self, message):
 		if DEBUG: print("Sending RequestVote message: " + message)
-		self.transport.send(message)
+		self.socket.send_all(message)
 
 	async def appendEntries(self):
 		pass
@@ -91,7 +93,8 @@ if __name__ == "__main__":
 
 	# Connect to the network. All messages to/from other replicas and clients will
 	# occur over this socket
-	# sock = socket.socket(socket.AF_UNIX, socket.SOCK_SEQPACKET)
-	# sock.connect(my_id)
+	sock = socket.socket(socket.AF_UNIX, socket.SOCK_SEQPACKET)
+	sock.connect(my_id)
 
-	asyncio.get_event_loop().create_unix_connection(lambda: Server(my_id, replica_ids), my_id)
+	Server(my_id, replica_ids, sock)
+	
