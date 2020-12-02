@@ -13,30 +13,36 @@ class Server:
 	id: int # id of this server
 	replica_ids: List[int] # replica ids
 	currentTerm: int # current term of this server
-	log: List[LogEntry] # logentries
+	logEntries: List[LogEntry] # logentries
 	votedFor: int # who this server votedfor this term
 
 	# volatile data
 	commitIndex: int # last committed log entry index
 	lastApplied: int # last applied log entry index
 	state: str # one of "follower", "leader", "candidate"
+	votesReceived: int # number of votes received this term
 
 	# communcation and event management objects
 	sock: socket.socket # socket
 	event_loop = None # asyncio loop
-	timeout: asyncio.TimerHandle = None # asyncio call_later object to handle timeout
+	election_timeout: asyncio.TimerHandle = None # asyncio call_later object to handle election timeout
+	heartbeat: asyncio.TimerHandle = None # asyncio call_later object to handle heartbeat
 
 	def __init__(self, my_id: int, replica_ids: List[int], sock: socket.socket):
 		self.id = my_id
 		self.replica_ids = replica_ids
 		self.currentTerm = self.commitIndex = self.lastApplied = 0
-		self.state: "follower"
+		self.votedFor = None
+		self.state = "follower"
 		self.event_loop = asyncio.get_event_loop()
 		self.sock = sock
-		self.startTimeout()
+		self.restartElectionTimeout()
 		self.event_loop.create_task(self.receive())
 		self.event_loop.run_forever()
 		pass
+
+	def log(self, message, dest=None):
+		print(f'[{round(time.time() * 1000)}][Host: {self.id}] {message} {"[To: " + dest + "]" if dest else ""}')
 
 	async def receive(self):
 		msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
@@ -50,45 +56,89 @@ class Server:
 			
 			# Handle noop messages. This may be removed from your final implementation
 			elif msg['type'] == 'noop':
-				print(f'{msg["dst"]} received a NOOP from {msg["src"]}')
-
+				self.log(f'{msg["dst"]} received a NOOP from {msg["src"]}')
+			
+			# Handle RequestVote messages. If follower has not voted for anyone this term, send a vote back.
 			elif msg['type'] == 'rv':
-				print(msg)
+				if msg['term'] > self.currentTerm:
+					self.becomeFollower(msg['term'])
+				if msg['term'] == self.currentTerm and self.votedFor in [None, msg['src']]:
+					self.restartElectionTimeout()
+					self.sendVoteMessage(msg['src'])
+	
+			# Handle Vote messages
+			elif msg['type'] == 'vote':
+				if self.state != 'leader' and msg['term'] == self.currentTerm:
+					self.votesReceived += 1
+					if self.votesReceived > len(replica_ids) / 2:
+						self.election_timeout.cancel()
+						self.becomeLeader()
+				elif msg['term'] > self.currentTerm:
+					self.becomeFollower(msg['term'])
+
+			elif msg['type'] == 'ae':
+				# we can only have one leader, so if someone (Joe Biden) is already sending AppendEntry messages, concede to Joe Biden
+				if self.state != 'follower':
+					self.becomeFollower(msg['term'])
+				self.restartElectionTimeout()
 		self.event_loop.create_task(self.receive())
-
-
-	def startTimeout(self):
-		timeout = random.randint(150, 300) / 1000
-		if self.timeout != None: 
-			self.timeout.cancel()
-		self.timeout = self.event_loop.call_later(timeout, self.beginElection)
-
-	def beginElection(self):
-		print("Beginning Election on host " + self.id)
-		self.currentTerm += 1
-		requests = [self.event_loop.create_task(self.sendRVMessage(replica_id)) for replica_id in replica_ids]
-		asyncio.gather(*requests)
-		pass
-
-	async def sendRVMessage(self, dest):
-		print("Sending RV Message")
-		message = {'src': self.id, 'dst': dest, 'leader': 'FFFF', 'type': 'rv' }
-		self.sock.sendall(json.dumps(message).encode())
 
 	async def appendEntries(self):
 		pass
 
-# while True:
-# 	ready = select.select([sock], [], [], 0.1)[0]
-		
-# 	clock = time.time()
-# 	if clock-last > 2:
-# 		# Send a no-op message to a random peer every two seconds, just for fun
-# 		# You definitely want to remove this from your implementation
-# 		msg = {'src': my_id, 'dst': random.choice(replica_ids), 'leader': 'FFFF', 'type': 'noop'}
-# 		sock.send(json.dumps(msg))
-# 		print '%s sending a NOOP to %s' % (msg['src'], msg['dst'])
-# 		last = clock
+	#State change methods
+	def becomeCandidate(self):
+		self.log("Became a candidate")
+		self.currentTerm += 1
+		self.votedFor = self.id
+		self.votesReceived = 0
+		requests = [self.event_loop.create_task(self.sendRVMessage(replica_id)) for replica_id in replica_ids]
+		asyncio.wait(requests) # TODO: This needs to have a timeout
+	
+	def becomeFollower(self, term):
+		self.restartElectionTimeout()
+		self.currentTerm = term
+		self.votedFor = None
+		if self.state != 'follower':
+			self.state = "follower"
+			self.log("Became a follower")
+			if self.heartbeat is not None:
+				self.heartbeat.cancel()
+
+	def becomeLeader(self):
+		self.log("Became the leader")
+		self.state = "leader"
+		self.sendHeartbeat()
+
+	# Timed Callbacks
+	def sendHeartbeat(self):
+		requests = [self.event_loop.create_task(self.sendAEMessage(replica_id)) for replica_id in replica_ids]
+		asyncio.wait(requests) # TODO: This needs to have a timeout
+		self.heartbeat = self.event_loop.call_later(0.05, self.sendHeartbeat)
+	
+	def restartElectionTimeout(self):
+		timeout = random.randint(150, 300) / 1000
+		#self.log("Timeout restarted to : " + str(timeout))
+		if self.election_timeout != None: 
+			self.election_timeout.cancel()
+		self.election_timeout = self.event_loop.call_later(timeout, self.becomeCandidate)
+
+	# Send Message methods
+	async def sendAEMessage(self, dest):
+		self.log("Sending AE Message", dest=dest)
+		message = { 'src': self.id, 'dst': dest, 'leader': self.id, 'type': 'ae', 'term': self.currentTerm }
+		self.sock.sendall(json.dumps(message).encode())
+
+	async def sendRVMessage(self, dest):
+		self.log("Sending RV Message", dest=dest)
+		message = {'src': self.id, 'dst': dest, 'leader': 'FFFF', 'type': 'rv', 'term': self.currentTerm }
+		self.sock.sendall(json.dumps(message).encode())
+
+	def sendVoteMessage(self, dest):
+		self.log("Sending Vote", dest=dest)
+		self.votedFor = dest
+		message = {'src': self.id, 'dst': dest, 'leader': 'FFFF', 'type': 'vote', 'term': self.currentTerm }
+		self.sock.sendall(json.dumps(message).encode())
 
 if __name__ == "__main__":
 	# Your ID number
