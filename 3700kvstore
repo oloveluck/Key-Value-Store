@@ -186,13 +186,18 @@ class Server:
 		self.sock.sendall(json.dumps(msg).encode())
 
 	def processRequest(self, request):
-		entry = LogEntry()
+		#TODO process cached entries
+		pass
 
 	def appendEntries(self, entries, commitIndex):
 		self.logEntries += entries
 		for entry in self.logEntries[self.commitIndex:commitIndex]:
 			self.applyEntry(entry)
 		self.commitIndex = commitIndex
+
+	def self.applyEntry(self, entry):
+		pass
+
 
 if __name__ == "__main__":
 	# Your ID number
