@@ -59,6 +59,7 @@ class Server:
 		self.logEntries = []
 
 		self.event_loop = asyncio.get_event_loop()
+		self.event_loop.set_debug(DEBUG)
 		self.restartElectionTimeout()
 		self.event_loop.create_task(self.receive())
 		self.event_loop.run_forever()
@@ -76,11 +77,13 @@ class Server:
 			# For now, ignore get() and put() from clients
 			if msg['type'] in ['get', 'put']:
 				if self.state == "leader":
-					self.processRequest()
+					self.processRequest(msg)
 				elif self.state == "candidate":
 					self.requests.append(msg)
 				else:
-					self.event_loop.call_soon(self.forwardMessage(msg))
+					# TODO handle forwarding messages
+					# self.event_loop.call_soon(self.forwardMessage, msg)
+					pass
 			
 			# Handle RequestVote messages. If follower has not voted for anyone this term, send a vote back.
 			elif msg['type'] == 'rv':
@@ -164,20 +167,34 @@ class Server:
 		self.election_timeout = self.event_loop.call_later(timeout, self.becomeCandidate)
 
 	# Send Message methods
-	async def sendAEMessage(self, dest):
+	async def sendAEMessage(self, dest, entries=[]):
 		self.log("Sending AE Message", dest=dest)
-		message = { 'src': self.id, 'dst': dest, 'leader': self.id, 'type': 'ae', 'term': self.currentTerm }
+		message = { 'src': self.id, 
+					'dst': dest, 
+					'leader': self.id, 
+					'type': 'ae', 
+					'term': self.currentTerm, 
+					'entries': entries, 
+					'commitIndex': self.commitIndex }
 		self.sock.sendall(json.dumps(message).encode())
 
 	async def sendRVMessage(self, dest):
 		self.log("Sending RV Message", dest=dest)
-		message = {'src': self.id, 'dst': dest, 'leader': self.leader_id, 'type': 'rv', 'term': self.currentTerm }
+		message = {'src': self.id, 
+				   'dst': dest, 
+				   'leader': self.leader_id, 
+				   'type': 'rv', 
+				   'term': self.currentTerm }
 		self.sock.sendall(json.dumps(message).encode())
 
 	def sendVoteMessage(self, dest):
 		self.log("Sending Vote", dest=dest)
 		self.votedFor = dest
-		message = {'src': self.id, 'dst': dest, 'leader': self.leader_id, 'type': 'vote', 'term': self.currentTerm }
+		message = {'src': self.id, 
+				   'dst': dest, 
+				   'leader': self.leader_id, 
+				   'type': 'vote', 
+				   'term': self.currentTerm }
 		self.sock.sendall(json.dumps(message).encode())
 
 	def forwardMessage(self, msg):
@@ -195,7 +212,7 @@ class Server:
 			self.applyEntry(entry)
 		self.commitIndex = commitIndex
 
-	def self.applyEntry(self, entry):
+	def applyEntry(self, entry):
 		pass
 
 
@@ -209,6 +226,7 @@ if __name__ == "__main__":
 	# Connect to the network. All messages to/from other replicas and clients will
 	# occur over this socket
 	sock = socket.socket(socket.AF_UNIX, socket.SOCK_SEQPACKET)
+	sock.setblocking(0)
 	sock.connect(my_id)
 
 	Server(my_id, replica_ids, sock)
