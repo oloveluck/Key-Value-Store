@@ -195,7 +195,7 @@ class Server:
 			self.applyEntry(entry)
 		self.commitIndex = commitIndex
 
-	def self.applyEntry(self, entry):
+	def applyEntry(self, entry):
 		pass
 
 
