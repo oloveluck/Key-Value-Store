@@ -16,12 +16,20 @@ class Database:
 	def get(self, key):
 		if key in self.db:
 			return self.db[key]
+		else:
+			return ""
+
+
 
 class LogEntry:
 	entryType: str
+	term:int
+	data:dict
 	
-	def __init__(self, entryType, ):
+	def __init__(self, entryType:str, term:int, data:dict):
 		self.entryType = entryType
+		self.term = term
+		self.data = data
 
 class Server:
 	# persistent data
@@ -30,6 +38,7 @@ class Server:
 	currentTerm: int # current term of this server
 	logEntries: List[LogEntry] # logentries
 	votedFor: int # who this server votedfor this term
+	data: Database # database
 
 	# volatile data
 	commitIndex: int # last committed log entry index
@@ -37,6 +46,8 @@ class Server:
 	state: str # one of "follower", "leader", "candidate"
 	votesReceived: int # number of votes received this term
 	leader_id: int
+
+	logFile = None
 
 	# communcation and event management objects
 	sock: socket.socket # socket
@@ -57,16 +68,22 @@ class Server:
 		self.leader_id = 'FFFF'
 		self.requests = []
 		self.logEntries = []
+		self.data = Database()
+
+		self.logFile = open("output" + self.id + ".txt", "w")
 
 		self.event_loop = asyncio.get_event_loop()
 		self.event_loop.set_debug(DEBUG)
 		self.restartElectionTimeout()
 		self.event_loop.create_task(self.receive())
 		self.event_loop.run_forever()
+		
 		pass
 
 	def log(self, message, dest=None):
-		print(f'[{round(time.time() * 1000)}][Host: {self.id}] {message} {"[To: " + dest + "]" if dest else ""}')
+		message = f'[{round(time.time() * 1000)}][Host: {self.id}] {message} {"[To: " + dest + "]" if dest else ""}\n'
+		self.logFile.write(message)
+		print(message)
 
 	async def receive(self):
 		msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
@@ -74,6 +91,7 @@ class Server:
 			pass
 		else:
 			msg = json.loads(msg_raw)
+			#self.log('RECEIVED '  + msg['type'] + '. ID: ' + msg['MID'] if 'MID' in msg else "")
 			# For now, ignore get() and put() from clients
 			if msg['type'] in ['get', 'put']:
 				if self.state == "leader":
@@ -82,15 +100,17 @@ class Server:
 					self.requests.append(msg)
 				else:
 					# TODO handle forwarding messages
-					# self.event_loop.call_soon(self.forwardMessage, msg)
-					pass
+					if self.currentTerm == 0:
+						self.sendFailMessage(msg)
+					else:	
+						self.event_loop.call_soon(self.forwardMessage, msg)
 			
 			# Handle RequestVote messages. If follower has not voted for anyone this term, send a vote back.
 			elif msg['type'] == 'rv':
 				self.log("Received RV Message [FROM: " + msg['src'] + "]")
 				if msg['term'] > self.currentTerm:
 					self.restartElectionTimeout()
-					self.becomeFollower(msg['term'], msg['leader'])
+					#self.becomeFollower(msg['term'], msg['leader'])
 				if msg['term'] == self.currentTerm and self.votedFor in [None, msg['src']]:
 					self.restartElectionTimeout()
 					self.sendVoteMessage(msg['src'])
@@ -117,6 +137,10 @@ class Server:
 
 					# TODO: Checking log indexes
 					self.appendEntries(msg['entries'], msg['commitIndex'])
+			
+			elif msg['type'] == 'rae':
+				self.log("Received AE Response [FROM: " + msg['src'] + "]")
+				
 					
 				else:
 					self.log("Append Entries discarded. Term is lower than Current.")
@@ -134,6 +158,7 @@ class Server:
 		asyncio.wait(requests) # TODO: This needs to have a timeout
 	
 	def becomeFollower(self, term, leader):
+		self.log("Became a follower of " + leader)
 		if self.heartbeat is not None:
 			self.heartbeat.cancel()
 		self.leader_id = leader
@@ -141,7 +166,6 @@ class Server:
 		self.votedFor = None
 		if self.state != 'follower':
 			self.state = "follower"
-			self.log("Became a follower")
 		if len(self.requests):
 			requests = [self.event_loop.create_task(self.forwardMessage(msg)) for msg in self.requests]
 			asyncio.wait(requests) 
@@ -150,6 +174,7 @@ class Server:
 	def becomeLeader(self):
 		self.log("Became the leader")
 		self.state = "leader"
+		self.leader_id = self.id
 		self.sendHeartbeat()
 
 	# Timed Callbacks
@@ -167,7 +192,8 @@ class Server:
 		self.election_timeout = self.event_loop.call_later(timeout, self.becomeCandidate)
 
 	# Send Message methods
-	async def sendAEMessage(self, dest, entries=[]):
+	async def sendAEMessage(self, dest):
+		entries = [self.lastApplied:]
 		self.log("Sending AE Message", dest=dest)
 		message = { 'src': self.id, 
 					'dst': dest, 
@@ -201,10 +227,37 @@ class Server:
 		self.log("Forwarding Message", dest=self.leader_id)
 		msg['dst'] = self.leader_id
 		self.sock.sendall(json.dumps(msg).encode())
+	
+
+	def sendFailMessage(self, origMessage):
+		msg = {
+			"src": self.id,
+			"dst": origMessage['src'],
+			"type": "fail",
+			"leader": self.leader_id,
+			"MID": origMessage['MID']
+		}
+		self.sock.sendall(json.dumps(msg).encode())
 
 	def processRequest(self, request):
-		#TODO process cached entries
-		pass
+		if request['type'] == 'get':
+			resp = { "src": self.id,
+					 "dst": request['dst'],
+					 "leader": self.leader_id,
+					 "MID": request['MID']
+					 "value": self.data.get(msg['key']) }
+			self.sock.sendall(json.dumps(resp).encode())
+		elif request['type'] == 'put':
+			# stage 1 (append Entry) respond with ready to commit
+			self.logEntries.append(LogEntry('put', self.currentTerm, {"key": request['key'], "value": request['value']}))
+			# stage 2 (commit) or abort
+
+			resp = {
+
+			}
+			self.sock.sendall(json.dumps(resp).encode())
+		else:
+			self.log("Uknown Request Type: " + request['type'])
 
 	def appendEntries(self, entries, commitIndex):
 		self.logEntries += entries
