@@ -46,6 +46,7 @@ class Server:
 	state: str # one of "follower", "leader", "candidate"
 	votesReceived: int # number of votes received this term
 	leader_id: int
+	ae_commits:dict
 
 	logFile = None
 
@@ -69,6 +70,7 @@ class Server:
 		self.requests = []
 		self.logEntries = []
 		self.data = Database()
+		self.ae_commits = {}
 
 		self.logFile = open("output" + self.id + ".txt", "w")
 
@@ -125,25 +127,38 @@ class Server:
 				elif msg['term'] > self.currentTerm:
 					self.restartElectionTimeout()
 					self.becomeFollower(msg['term'], msg['leader'])
-
+					
+			# Handle Append Entry Message 
 			elif msg['type'] == 'ae':
 				self.log("Received AE Message [FROM: " + msg['src'] + "]")
 				if msg['term'] >= self.currentTerm:
 					self.restartElectionTimeout()
 					
-					# we can only have one leader, so if someone (Joe Biden) is already sending AppendEntry messages, concede to Joe Biden
+					# we can only have one leader, so if someone (Joe Biden) is already sending AppendEntry messages, concede to Joe Biden.
 					if self.state != 'follower':
 						self.becomeFollower(msg['term'], msg['leader'])
 
 					# TODO: Checking log indexes
 					self.appendEntries(msg['entries'], msg['commitIndex'])
-			
-			elif msg['type'] == 'rae':
-				self.log("Received AE Response [FROM: " + msg['src'] + "]")
-				
-					
 				else:
 					self.log("Append Entries discarded. Term is lower than Current.")
+			
+			elif msg['type'] == 'rae':
+				if self.state != 'leader':
+					self.log("BAD!!! Received AE Response when in state: ", self.state, ". For Entry: ", msg['entries'])
+				self.log("Received AE Response [FROM: " + msg['src'] + "]")
+				entries = msg['entries']
+				if entries in self.ae_commits: 
+					self.ae_commits[entries] += 1
+				else: 
+					self.log("Received AE message before it exists in commits dictionary")
+				if ae_commits[entries] >=  len(self.replica_ids) / 2 + 1:
+					self.sendCommitMessage(msg['entries'])
+			elif msg['type'] == 'commit':
+				if self.state != 'follower':
+					self.log("BAD!!! Received Commit Response when in state", self.state, ". For Entry: ", msg['entries'])
+				self.log("Received AE Response [FROM: " + msg['src'] + "]")
+				self.commitIndex = msg["commitIndex"]
 		self.event_loop.create_task(self.receive())
 
 
@@ -193,8 +208,8 @@ class Server:
 
 	# Send Message methods
 	async def sendAEMessage(self, dest):
-		entries = [self.lastApplied:]
-		self.log("Sending AE Message", dest=dest)
+		entries = [self.lastApplied:] #TODO this only sends the lastApplied entry. Is it is possible that there are multiple entries that must be committed?
+		self.log("Sending AE Message", dest=dest, entries)
 		message = { 'src': self.id, 
 					'dst': dest, 
 					'leader': self.id, 
@@ -202,6 +217,8 @@ class Server:
 					'term': self.currentTerm, 
 					'entries': entries, 
 					'commitIndex': self.commitIndex }
+		if entries not in self.ae_commits: 
+			self.ae_commits[entries] = 0
 		self.sock.sendall(json.dumps(message).encode())
 
 	async def sendRVMessage(self, dest):
@@ -239,6 +256,7 @@ class Server:
 		}
 		self.sock.sendall(json.dumps(msg).encode())
 
+
 	def processRequest(self, request):
 		if request['type'] == 'get':
 			resp = { "src": self.id,
@@ -251,10 +269,8 @@ class Server:
 			# stage 1 (append Entry) respond with ready to commit
 			self.logEntries.append(LogEntry('put', self.currentTerm, {"key": request['key'], "value": request['value']}))
 			# stage 2 (commit) or abort
-
-			resp = {
-
-			}
+			#TODO
+			
 			self.sock.sendall(json.dumps(resp).encode())
 		else:
 			self.log("Uknown Request Type: " + request['type'])
@@ -264,6 +280,29 @@ class Server:
 		for entry in self.logEntries[self.commitIndex:commitIndex]:
 			self.applyEntry(entry)
 		self.commitIndex = commitIndex
+
+
+	def sendCommitMessage(self):
+		if self.state == "leader":
+			self.commitIndex += 1
+			msg = {
+				"type": "commit",
+				"commitIndex": self.commitIndex
+			}
+			self.sock.sendall(json.dumps(msg).encode())
+		else:
+			self.log("Unable to commmit if not the leader")
+
+	def sendAbortMessage(self)
+		if self.state == "leader":
+			msg = {
+				"type": "abort",
+				#TODO
+			}
+			self.sock.sendall(json.dumps(msg).encode())
+		else:
+			self.log("Unable to abort if not the leader")
+
 
 	def applyEntry(self, entry):
 		pass
