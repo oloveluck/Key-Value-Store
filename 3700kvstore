@@ -3,7 +3,7 @@
 import sys, socket, select, time, json, random, asyncio
 from typing import List
 
-DEBUG = True
+DEBUG = False
 
 class Database:
 	db = None
@@ -54,7 +54,6 @@ class Server:
 	leader_id: int
 
 	applySuccesses: int
-	commitSuccesses: int
 
 	logFile = None
 
@@ -79,7 +78,8 @@ class Server:
 		self.logEntries = []
 		self.data = Database()
 
-		self.logFile = open("output" + self.id + ".txt", "w")
+		if DEBUG:
+			self.logFile = open("output" + self.id + ".txt", "w")
 
 		self.event_loop = asyncio.get_event_loop()
 		self.event_loop.set_debug(DEBUG)
@@ -90,9 +90,10 @@ class Server:
 		pass
 
 	def log(self, message, dest=None):
-		message = f'[{round(time.time() * 1000)}][Host: {self.id}] {message} {"[To: " + dest + "]" if dest else ""}\n'
-		self.logFile.write(message)
-		print(message)
+		if DEBUG:
+			message = f'[{round(time.time() * 1000)}][Host: {self.id}] {message} {"[To: " + dest + "]" if dest else ""}\n'
+			self.logFile.write(message)
+			print(message)
 
 	async def receive(self):
 		msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
@@ -171,8 +172,8 @@ class Server:
 							self.lastApplied += msg['numApplied']
 							self.applySuccesses = 0
 							for entry in self.logEntries[self.commitIndex:self.commitIndex + msg['numApplied']]:
-								self.applyEntry(entry)
-								self.commitIndex += 1
+								self.event_loop.create_task(self.applyEntry(entry))
+							self.commitIndex += msg['numApplied']
 							#self.log("New Commit Index:" + str(self.commitIndex))
 							#TODO commit 
 				# if ae_commits[entries] >=  len(self.replica_ids) / 2 + 1:
@@ -325,12 +326,12 @@ class Server:
 			#  "Server adding entries " + json.dumps(entries))
 		self.logEntries += entries
 		for entry in self.logEntries[self.commitIndex:commitIndex]:
-			self.applyEntry(entry)
+			self.event_loop.create_task(self.applyEntry(entry))
 		self.lastApplied = len(self.logEntries)
 		self.commitIndex = commitIndex
 
 
-	def applyEntry(self, entry):
+	async def applyEntry(self, entry):
 		#self.log("Applying" + json.dumps(entry))
 		if entry['entryType'] == "put":
 			self.data.put(entry['data']['key'], entry['data']['value'])
