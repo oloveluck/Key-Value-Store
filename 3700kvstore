@@ -112,7 +112,8 @@ class Server:
 					# TODO handle forwarding messages
 					if self.currentTerm == 0:
 						# wait to see if election can be resolved
-						await asyncio.sleep(1)
+						print("WAITING FOR RESOLUTION")
+						await asyncio.sleep(0.5)
 						if self.currentTerm == 0:
 							self.sendFailMessage(msg)
 						else:
@@ -219,8 +220,7 @@ class Server:
 	def sendHeartbeat(self):
 		#TODO Add any entries that need to be logged
 		requests = [self.event_loop.create_task(self.sendAEMessage(replica_id)) for replica_id in self.replicas]
-		asyncio.wait(requests) # TODO: This needs to have a timeout
-		self.heartbeat = self.event_loop.call_later(0.1, self.sendHeartbeat)
+		self.heartbeat = self.event_loop.call_later(0.08, self.sendHeartbeat)
 	
 	def restartElectionTimeout(self):
 		timeout = random.randint(150, 300) / 1000
@@ -315,7 +315,6 @@ class Server:
 			self.event_loop.sock_sendall(self.sock, json.dumps(resp).encode())
 		elif request['type'] == 'put':
 			self.logEntries.append( { 'entryType': 'put', 'term': self.currentTerm, 'index': len(self.logEntries), 'data': {"key": request['key'], "value": request['value'], 'MID': request['MID'], 'src': request['src']} })
-			# self.sock.sendall(json.dumps(resp).encode())
 		else:
 			self.log("Uknown Request Type: " + request['type'])
 
