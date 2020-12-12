@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import sys, os, time, json, socket, select, random, subprocess, string, hashlib, bisect, atexit
+import sys, os, time, json, socket, select, random, subprocess, signal, string, hashlib, bisect, atexit
 
-VERSION = "0.7"
+VERSION = "0.8"
 
 REPLICA_PROG = './3700kvstore'
 NUM_CLIENTS = 8
@@ -350,8 +350,12 @@ class Replica:
     def run(self, rids, silence):
         args = [REPLICA_PROG, self.rid]
         args.extend(rids - set([self.rid]))
-        if silence: self.proc = subprocess.Popen(args, stdout=DEVNULL, stderr=DEVNULL)
-        else: self.proc = subprocess.Popen(args)
+
+        # Launch each process in it's own process group so that it can be killed without affecting
+        # the main process
+        if silence: self.proc = subprocess.Popen(args, stdout=DEVNULL, stderr=DEVNULL, preexec_fn=os.setsid)
+        else: self.proc = subprocess.Popen(args, preexec_fn=os.setsid)
+
         self.alive = True
         
     def shutdown(self):
@@ -361,7 +365,8 @@ class Replica:
             self.listen_sock.close()
             self.listen_sock = None
             self.client_sock = None
-            self.proc.kill()
+            # Kill the process group assigned to the raft replica
+            os.killpg(os.getpgid(self.proc.pid), signal.SIGTERM)
             self.proc.wait()
             try: os.unlink(self.rid)
             except: pass
@@ -417,6 +422,9 @@ class Simulation:
     def run(self):
         for r in self.replicas.itervalues():
             r.run(self.rids, self.silence)
+
+        # sleep for a second to allow all spawned sub-processes to connect/perform initialization
+        #time.sleep(1)
         
         # initialize the clock and create all the get(), put(), and kill() events
         clock = start = time.time()
@@ -667,6 +675,9 @@ class Simulation:
         if self.stats.died:
             # Replicas may not crash
             if verbose: fail('\tError: >0 replicas died unexpectedly')
+            passed = False
+        if sum(len(c.items) for c in self.clients.values()) == 0:
+            if verbose: fail('\tError: No state stored in replicas')
             passed = False
         if self.stats.unanswered_get > self.stats.generated_get * self.conf.max_get_frac:
             # Your system must answer a minimal number of get requests from clients

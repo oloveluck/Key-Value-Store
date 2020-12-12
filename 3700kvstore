@@ -41,6 +41,7 @@ class Server:
 	# persistent data
 	id: int # id of this server
 	replicas = None # replicas and their commit and last applied indexes
+	majority: int
 	currentTerm: int # current term of this server
 	logEntries: List # logentries
 	votedFor: int # who this server votedfor this term
@@ -63,13 +64,16 @@ class Server:
 	election_timeout: asyncio.TimerHandle = None # asyncio call_later object to handle election timeout
 	heartbeat: asyncio.TimerHandle = None # asyncio call_later object to handle heartbeat
 
+
+
 	# cache requests during election
 	requests: List
 
 	def __init__(self, my_id: int, replica_ids: List[int], sock: socket.socket):
 		self.id = my_id
 		self.replicas = { replica: {'commitIndex': 0, 'lastApplied': 0 } for replica in replica_ids }
-		self.currentTerm = self.commitIndex = self.lastApplied = self.applySuccesses = self.commitSuccesses = 0
+		self.majority = (len(self.replicas) + 1) / 2
+		self.currentTerm = self.commitIndex = self.lastApplied = 0
 		self.votedFor = None
 		self.state = "follower"
 		self.sock = sock
@@ -86,8 +90,7 @@ class Server:
 		self.restartElectionTimeout()
 		self.event_loop.create_task(self.receive())
 		self.event_loop.run_forever()
-		
-		pass
+
 
 	def log(self, message, dest=None):
 		if DEBUG:
@@ -104,7 +107,7 @@ class Server:
 			#self.log('RECEIVED '  + msg['type'] + '. ID: ' + (msg['MID'] if 'MID' in msg else ""))
 			# For now, ignore get() and put() from clients
 			if msg['type'] in ['get', 'put']:
-				self.log("Received " + msg['type'] + " MID: " + msg['MID'] + " : " + (msg['value'] if msg['type'] == 'put' else ""))
+				#self.log("Received " + msg['type'] + " MID: " + msg['MID'] + " : " + (msg['value'] if msg['type'] == 'put' else ""))
 				if self.state == "leader":
 					self.processRequest(msg)
 				elif self.state == "candidate":
@@ -113,12 +116,9 @@ class Server:
 					# TODO handle forwarding messages
 					if self.currentTerm == 0:
 						# wait to see if election can be resolved
-						print("WAITING FOR RESOLUTION")
-						await asyncio.sleep(0.5)
-						if self.currentTerm == 0:
-							self.sendFailMessage(msg)
-						else:
-							self.event_loop.call_soon(self.forwardMessage, msg)
+						self.log("WAITING FOR RESOLUTION")
+						call_later = lambda msg: (self.sendFailMessage(msg) if self.currentTerm == 0 else self.event_loop.call_soon(self.forwardMessage, msg))
+						self.event_loop.call_later(0.3, call_later(msg))
 					else:	
 						self.event_loop.call_soon(self.forwardMessage, msg)
 			
@@ -137,7 +137,7 @@ class Server:
 			elif msg['type'] == 'vote':
 				if self.state != 'leader' and msg['term'] == self.currentTerm:
 					self.votesReceived += 1
-					if self.votesReceived > len(self.replicas) / 2:
+					if self.votesReceived > self.majority:
 						self.election_timeout.cancel()
 						self.becomeLeader()
 				elif msg['term'] > self.currentTerm:
@@ -157,7 +157,6 @@ class Server:
 
 					# TODO: Checking log indexes
 					self.appendEntries(msg['entries'], msg['commitIndex'])
-
 					self.sendRAE(len(msg['entries']))					
 				else:
 					self.log("Append Entries discarded. Term is lower than Current.")
@@ -165,16 +164,16 @@ class Server:
 			elif msg['type'] == 'rae':
 				if msg['term'] >= self.currentTerm:
 					#self.log("Received AE Response [FROM: " + msg['src'] + "]")
-					self.replicas[msg['src']]['commitIndex'] = msg['commitIndex']
-					self.replicas[msg['src']]['lastApplied'] = msg['lastApplied']
 					if msg['lastApplied'] and msg['lastApplied'] == self.lastApplied + msg['numApplied']:
 						self.applySuccesses += 1
-						if self.applySuccesses > len(self.replicas) / 2:
+						if self.applySuccesses > self.majority:
 							self.lastApplied += msg['numApplied']
 							self.applySuccesses = 0
 							for entry in self.logEntries[self.commitIndex:self.commitIndex + msg['numApplied']]:
-								self.event_loop.create_task(self.applyEntry(entry))
+								self.applyEntry(entry)
 							self.commitIndex += msg['numApplied']
+					self.replicas[msg['src']]['commitIndex'] = msg['commitIndex']
+					self.replicas[msg['src']]['lastApplied'] = msg['lastApplied']
 							#self.log("New Commit Index:" + str(self.commitIndex))
 							#TODO commit 
 				# if ae_commits[entries] >=  len(self.replica_ids) / 2 + 1:
@@ -193,7 +192,7 @@ class Server:
 		self.state = "candidate"
 		self.currentTerm += 1
 		self.votedFor = self.id
-		self.votesReceived = 0
+		self.votesReceived = 1
 		requests = [self.event_loop.create_task(self.sendRVMessage(replica_id)) for replica_id in self.replicas]
 		asyncio.wait(requests, timeout=0.3) # TODO: This needs to have a timeout
 	
@@ -216,23 +215,27 @@ class Server:
 		self.state = "leader"
 		self.leader_id = self.id
 		self.sendHeartbeat()
+		self.applySuccesses = 1
 
 	# Timed Callbacks
 	def sendHeartbeat(self):
 		#TODO Add any entries that need to be logged
-		requests = [self.event_loop.create_task(self.sendAEMessage(replica_id)) for replica_id in self.replicas]
-		self.heartbeat = self.event_loop.call_later(0.08, self.sendHeartbeat)
+		self.log("Heartbeat")
+		for replica in replica_ids:
+			self.sendAEMessage(replica)
+		heartbeatTime = random.randint(30, 50) / 1000
+		self.heartbeat = self.event_loop.call_later(heartbeatTime, self.sendHeartbeat)
 	
 	def restartElectionTimeout(self):
-		timeout = random.randint(150, 300) / 1000
+		timeout = random.randint(60, 150) / 1000
 		#self.log("Timeout restarted to : " + str(timeout))
 		if self.election_timeout != None: 
 			self.election_timeout.cancel()
 		self.election_timeout = self.event_loop.call_later(timeout, self.becomeCandidate)
 
 	# Send Message methods
-	async def sendAEMessage(self, dest):
-		entries = self.logEntries[self.replicas[dest]['lastApplied']:] #TODO this only sends the lastApplied entry. Is it is possible that there are multiple entries that must be committed?
+	def sendAEMessage(self, dest):
+		entries = self.logEntries[self.replicas[dest]['lastApplied']:self.replicas[dest]['lastApplied']+25] #send in batches
 		message = { 'src': self.id, 
 					'dst': dest, 
 					'leader': self.id, 
@@ -241,7 +244,7 @@ class Server:
 					'entries': entries, 
 					'commitIndex': self.commitIndex }
 		#self.log("Sending AE Message: " + str(message), dest=dest)
-		self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
+		self.sock.send(json.dumps(message).encode())
 
 	async def sendRVMessage(self, dest):
 		#self.log("Sending RV Message", dest=dest)
@@ -263,15 +266,16 @@ class Server:
 		self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
 
 	def sendRAE(self, numApplied):
-		message = {'src': self.id, 
-				   'dst': self.leader_id, 
-				   'leader': self.leader_id, 
-				   'type': 'rae', 
-				   'term': self.currentTerm,
-				   'commitIndex': self.commitIndex,
-				   'lastApplied': self.lastApplied,
-				   'numApplied': numApplied }
-		self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
+		if numApplied:
+			message = {'src': self.id, 
+					   'dst': self.leader_id, 
+					   'leader': self.leader_id, 
+					   'type': 'rae', 
+					   'term': self.currentTerm,
+					   'commitIndex': self.commitIndex,
+					   'lastApplied': self.lastApplied,
+					   'numApplied': numApplied }
+			self.sock.send(json.dumps(message).encode())
 
 	def forwardMessage(self, msg):
 		toSend = {
@@ -282,7 +286,7 @@ class Server:
 			'MID': msg['MID']
 		}
 		self.log("Forwarding Message :" + json.dumps(toSend))
-		self.event_loop.sock_sendall(self.sock, json.dumps(toSend).encode())
+		self.sock.send(json.dumps(toSend).encode())
 	
 	def sendFailMessage(self, origMessage):
 		msg = {
@@ -313,7 +317,7 @@ class Server:
 					 'leader': self.leader_id,
 					 "MID": request['MID'],
 					 "value": self.data.get(request['key']) }
-			self.event_loop.sock_sendall(self.sock, json.dumps(resp).encode())
+			self.sock.send(json.dumps(resp).encode())
 		elif request['type'] == 'put':
 			self.logEntries.append( { 'entryType': 'put', 'term': self.currentTerm, 'index': len(self.logEntries), 'data': {"key": request['key'], "value": request['value'], 'MID': request['MID'], 'src': request['src']} })
 		else:
@@ -325,17 +329,17 @@ class Server:
 			#  "Server adding entries " + json.dumps(entries))
 		self.logEntries += entries
 		for entry in self.logEntries[self.commitIndex:commitIndex]:
-			self.event_loop.create_task(self.applyEntry(entry))
+			self.applyEntry(entry)
 		self.lastApplied = len(self.logEntries)
 		self.commitIndex = commitIndex
 
 
-	async def applyEntry(self, entry):
+	def applyEntry(self, entry):
 		#self.log("Applying" + json.dumps(entry))
 		if entry['entryType'] == "put":
 			self.data.put(entry['data']['key'], entry['data']['value'])
 		if self.state == 'leader':
-			self.log("Sending put response for" + entry['data']['MID'])
+			#self.log("Sending put response for" + entry['data']['MID'])
 			message = {
 				'src': self.id,
 				'dst': entry['data']['src'],
@@ -343,7 +347,7 @@ class Server:
 				'type': 'ok',
 				'MID': entry['data']['MID'] 
 			}
-			self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
+			self.sock.send(json.dumps(message).encode())
 
 
 if __name__ == "__main__":
