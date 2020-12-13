@@ -3,7 +3,7 @@
 import sys, socket, select, time, json, random, asyncio
 from typing import List
 
-DEBUG = False
+DEBUG = True
 
 class Database:
 	db = None
@@ -124,18 +124,15 @@ class Server:
 			
 			# Handle RequestVote messages. If follower has not voted for anyone this term, send a vote back.
 			elif msg['type'] == 'rv':
-				#self.log("Received RV Message [FROM: " + msg['src'] + "]")
-				if msg['term'] > self.currentTerm:
-					self.restartElectionTimeout()
-					self.currentTerm = msg['term']
-					#self.becomeFollower(msg['term'], msg['leader'])
-				if msg['term'] == self.currentTerm and self.votedFor in [None, msg['src']]:
+				self.log("Received RV Message [FROM: " + msg['src'] + "]")
+				up_to_date = msg['lastLogTerm'] > self.currentTerm or (msg['lastLogTerm'] == self.currentTerm and msg['lastLogIndex'] == len(self.logEntries) - 1)
+				if msg['term'] >= self.currentTerm and self.votedFor in [None, msg['src']] and up_to_date:
 					self.restartElectionTimeout()
 					self.sendVoteMessage(msg['src'])
 	
 			# Handle Vote messages
 			elif msg['type'] == 'vote':
-				if self.state != 'leader' and msg['term'] == self.currentTerm:
+				if self.state != 'lead':
 					self.votesReceived += 1
 					if self.votesReceived > self.majority:
 						self.election_timeout.cancel()
@@ -146,7 +143,7 @@ class Server:
 					
 			# Handle Append Entry Message 
 			elif msg['type'] == 'ae':
-				#self.log("Received AE Message [FROM: " + msg['src'] + "]")
+				self.log("Received AE Message [FROM: " + msg['src'] + "]")
 				if msg['term'] >= self.currentTerm:
 					self.leader_id = msg['src']
 					self.restartElectionTimeout()
@@ -168,7 +165,7 @@ class Server:
 						self.applySuccesses += 1
 						if self.applySuccesses > self.majority:
 							self.lastApplied += msg['numApplied']
-							self.applySuccesses = 0
+							self.applySuccesses = 1
 							for entry in self.logEntries[self.commitIndex:self.commitIndex + msg['numApplied']]:
 								self.applyEntry(entry)
 							self.commitIndex += msg['numApplied']
@@ -235,7 +232,7 @@ class Server:
 
 	# Send Message methods
 	def sendAEMessage(self, dest):
-		entries = self.logEntries[self.replicas[dest]['lastApplied']:self.replicas[dest]['lastApplied']+25] #send in batches
+		entries = self.logEntries[self.replicas[dest]['lastApplied']:self.replicas[dest]['lastApplied']+50] #send in batches
 		message = { 'src': self.id, 
 					'dst': dest, 
 					'leader': self.id, 
@@ -243,7 +240,7 @@ class Server:
 					'term': self.currentTerm, 
 					'entries': entries, 
 					'commitIndex': self.commitIndex }
-		#self.log("Sending AE Message: " + str(message), dest=dest)
+		self.log("Sending AE Message: " + str(message), dest=dest)
 		self.sock.send(json.dumps(message).encode())
 
 	async def sendRVMessage(self, dest):
@@ -252,18 +249,20 @@ class Server:
 				   'dst': dest, 
 				   'leader': self.leader_id, 
 				   'type': 'rv', 
-				   'term': self.currentTerm }
+				   'term': self.currentTerm,
+				   'lastLogTerm': self.currentTerm,
+				   'lastLogIndex': len(self.logEntries) - 1 }
 		self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
 
 	def sendVoteMessage(self, dest):
-		#self.log("Sending Vote", dest=dest)
+		self.log("Sending Vote", dest=dest)
 		self.votedFor = dest
 		message = {'src': self.id, 
 				   'dst': dest, 
 				   'leader': self.leader_id, 
 				   'type': 'vote', 
 				   'term': self.currentTerm }
-		self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
+		self.sock.send(json.dumps(message).encode())
 
 	def sendRAE(self, numApplied):
 		if numApplied:
