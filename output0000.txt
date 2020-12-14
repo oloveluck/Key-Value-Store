@@ -1,0 +1,345 @@
+[1607976060794][Host: 0000] Received RV Message [FROM: 0002] 
+[1607976060794][Host: 0000] Sending Vote [To: 0002]
+[1607976060797][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976060797][Host: 0000] Became a follower of 0002 
+[1607976060833][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976060878][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976060901][Host: 0000] Received RV Message [FROM: 0003] 
+[1607976060901][Host: 0000] Sending Vote [To: 0003]
+[1607976060916][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976060968][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061009][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061054][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061094][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061135][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061180][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061230][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061269][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061318][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061360][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061400][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061451][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061499][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061600][Host: 0000] Became a candidate 
+[1607976061626][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061626][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061671][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061671][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061718][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061718][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061759][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061759][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061807][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061807][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061828][Host: 0000] Received RV Message [FROM: 0001] 
+[1607976061851][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061851][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061887][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061887][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976061972][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976061973][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062021][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062021][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062069][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062069][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062111][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062111][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062150][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062150][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062189][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062189][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062223][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062223][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062267][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062268][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062303][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062303][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062342][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062342][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062387][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062388][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062437][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062437][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062469][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062469][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062506][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062506][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062558][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062558][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062592][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062593][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062629][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062629][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062680][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062680][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062732][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062732][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062781][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062781][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062834][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062834][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062882][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062882][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062918][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062918][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976062958][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976062958][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063003][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063003][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063043][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063043][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063089][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063090][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063129][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063129][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063170][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063170][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063222][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063222][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063261][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063261][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063292][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063292][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063341][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063341][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063415][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063416][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063456][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063456][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063507][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063507][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063558][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063558][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063605][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063605][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063676][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063676][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063730][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063730][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063774][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063774][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063797][Host: 0000] Received RV Message [FROM: 0004] 
+[1607976063811][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063811][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063856][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063856][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063904][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063904][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063952][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063952][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976063998][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976063998][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064035][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064035][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064085][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064085][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064128][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064128][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064180][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064180][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064223][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064223][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064268][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064268][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064308][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064309][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064360][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064360][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064410][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064410][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064457][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064457][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064503][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064503][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064537][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064537][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064583][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064584][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064630][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064630][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064668][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064668][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064720][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064720][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064759][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064759][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064792][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064792][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064827][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064827][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064869][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064869][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064956][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064956][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976064991][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976064991][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065043][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065043][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065090][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065090][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065140][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065140][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065189][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065189][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065224][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065224][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065259][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065259][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065296][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065296][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065346][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065347][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065390][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065390][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065433][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065433][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065483][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065484][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065519][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065519][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065568][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065568][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065610][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065610][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065663][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065663][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065706][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065706][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065758][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065758][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065799][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065799][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065851][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065851][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065895][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065895][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976065948][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976065948][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066002][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066002][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066046][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066046][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066097][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066097][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066130][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066130][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066174][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066174][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066207][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066207][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066251][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066251][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066297][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066297][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066349][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066349][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066401][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066401][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066451][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066451][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066494][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066494][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066538][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066539][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066576][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066576][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066619][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066619][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066653][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066653][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066699][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066699][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066743][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066743][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066778][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066778][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066830][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066830][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066866][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066866][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976066964][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976066964][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067048][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067048][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067086][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067086][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067139][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067139][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067190][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067190][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067239][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067239][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067290][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067290][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067337][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067337][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067380][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067380][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067428][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067428][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067482][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067482][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067528][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067529][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067562][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067562][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976067598][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976067598][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070632][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070632][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070673][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070673][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070716][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070716][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070768][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070768][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070808][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070809][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070849][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070849][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070902][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070902][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070943][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070943][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976070992][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976070992][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071080][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071080][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071122][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071122][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071205][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071205][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071246][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071246][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071295][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071296][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071347][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071347][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071389][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071389][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071441][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071441][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071486][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071486][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071540][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071540][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071586][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071586][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071673][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071674][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071714][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071714][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071752][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071752][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071800][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071801][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071838][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071838][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071883][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071883][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976071969][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976071969][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976072007][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976072007][Host: 0000] Append Entries discarded. Term is lower than Current. 
+[1607976072052][Host: 0000] Received AE Message [FROM: 0002] 
+[1607976072052][Host: 0000] Append Entries discarded. Term is lower than Current. 

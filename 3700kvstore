@@ -118,7 +118,7 @@ class Server:
 						# wait to see if election can be resolved
 						self.log("WAITING FOR RESOLUTION")
 						call_later = lambda msg: (self.sendFailMessage(msg) if self.currentTerm == 0 else self.event_loop.call_soon(self.forwardMessage, msg))
-						self.event_loop.call_later(0.3, call_later(msg))
+						self.event_loop.call_later(0.3, call_later, msg)
 					else:	
 						self.event_loop.call_soon(self.forwardMessage, msg)
 			
@@ -132,7 +132,7 @@ class Server:
 	
 			# Handle Vote messages
 			elif msg['type'] == 'vote':
-				if self.state != 'lead':
+				if self.state != 'leader':
 					self.votesReceived += 1
 					if self.votesReceived > self.majority:
 						self.election_timeout.cancel()
@@ -144,14 +144,10 @@ class Server:
 			# Handle Append Entry Message 
 			elif msg['type'] == 'ae':
 				self.log("Received AE Message [FROM: " + msg['src'] + "]")
-				if msg['term'] >= self.currentTerm:
-					self.leader_id = msg['src']
+				if msg['term'] > self.currentTerm:
+					self.becomeFollower(msg['term'], msg['leader'])
+				if msg['term'] == self.currentTerm:
 					self.restartElectionTimeout()
-					
-					# we can only have one leader, so if someone (Joe Biden) is already sending AppendEntry messages, concede to Joe Biden.
-					if self.state != 'follower':
-						self.becomeFollower(msg['term'], msg['leader'])
-
 					# TODO: Checking log indexes
 					self.appendEntries(msg['entries'], msg['commitIndex'])
 					self.sendRAE(len(msg['entries']))					
@@ -159,8 +155,8 @@ class Server:
 					self.log("Append Entries discarded. Term is lower than Current.")
 			
 			elif msg['type'] == 'rae':
+				self.log("Received AE Response [FROM: " + msg['src'] + "]" + str(msg))
 				if msg['term'] >= self.currentTerm:
-					#self.log("Received AE Response [FROM: " + msg['src'] + "]")
 					if msg['lastApplied'] and msg['lastApplied'] == self.lastApplied + msg['numApplied']:
 						self.applySuccesses += 1
 						if self.applySuccesses > self.majority:
@@ -241,7 +237,7 @@ class Server:
 					'entries': entries, 
 					'commitIndex': self.commitIndex }
 		self.log("Sending AE Message: " + str(message), dest=dest)
-		self.sock.send(json.dumps(message).encode())
+		self.event_loop.sock_sendall(self.sock, json.dumps(message).encode())
 
 	async def sendRVMessage(self, dest):
 		#self.log("Sending RV Message", dest=dest)
