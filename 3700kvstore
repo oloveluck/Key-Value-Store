@@ -29,27 +29,49 @@ class State:
         self.commitIndex = self.lastApplied = self.currentTerm = 0
 
 class RPC:
-    term : int
-    msg_type: str
     dst: str
+    leader: str
+    msg_type: str
 
+    def __init__(self, dst, leader, msg_type):
+        self.dst = dst
+        self.leader = leader
+        self.msg_type = msg_type
+
+class ClientRPC(RPC):
+    MID: str
+    key: str
     
-    
+    def __init__(self, dst, leader, msg_type, MID, key):
+        super().__init__(dst, leader, msg_type)
+        self.MID = MID
+        self.key = key
+
+class ServerRPC(RPC):
+    term : int
+
+    def __init__(self, term, dst, leader, msg_type):
+        super().__init__(dst, leader, msg_type)
+        self.term = term
+
+
 class RPCFactory:
-    def BuildMessage(msg) -> RPC:
+    def BuildMessage(self, msg) -> RPC:
         """
         Builds message from JSON response.
         """
         if msg["type"] == "rv":
-            return RequestVote(msg['src'], msg['lastLogIndex'], msg['lastLogTerm'])
+            return RequestVote(msg['src'], msg['lastLogIndex'], msg['lastLogTerm'], msg['term'],  msg['leader'])
         elif msg['type'] == 'ae':
-            return AppendEntries(msg['src'], msg['leader'], msg['prevLogIndex'], msg['prevLogTerm'], msg['leaderCommit'], msg['entries'])
+            return AppendEntries(msg['src'], msg['leader'], msg['prevLogIndex'], msg['prevLogTerm'], msg['leaderCommit'], msg['entries'], msg['term'])
         elif msg['type'] == 'aer':
             return AppendEntriesResponse(msg['src'], msg['success'], msg['term'], msg['matchIndex'])
         elif msg['type'] == 'rvr':
-            return RequestVoteResponse(msg['src'], msg['voteGranted'], msg['src'], msg['term'])
-        elif msg['type'] in ['get', 'put']:
+            return RequestVoteResponse(msg['src'], msg['leader'], msg['voteGranted'], msg['term'])
+        elif msg['type'] == 'get':
             pass #TODO finish
+        elif msg['type'] == 'put':
+            pass
     
 class AppendEntriesResponse(RPC):
     success: bool
@@ -70,32 +92,96 @@ class AppendEntriesResponse(RPC):
             'leader': leader,
             "term": self.term,
             'matchIndex': self.matchIndex })
+
+class ForwardMessage(ClientRPC):
+    def __init__(self, leader, dst, MID):
+        super().__init__(dst, leader, 'redirect', MID, None)
+
+    def toJSON(self, src):
+        return json.dumps({
+            'src': src,
+            'dst': self.dst,
+            'leader': self.leader,
+            'MID': self.MID,
+            'type': self.msg_type,
+        })
+
+class Get(ClientRPC):
+    """
+    A Get request
+    """
+    def __init__(self, src, leader, key, MID):
+        super().__init__(src, leader, "get", MID, key)
+
+    def handleMessage(self, server: Server):
+        if self.leader != server.leader:
+            ## forward message to the leader
+            return ForwardMessage(self.leader, self.dst, self.MID)
+        else:
+            return GetResponse(self.MID, self.leader, self.dst, self.key, server.data[self.key] if self.key in server.data else "")
+
+class GetResponse(ClientRPC):
+    value: str
+    def __init__(self, mid : str, leader : str, dst : str, key : str, value : str):
+        super().__init__(src, leader, "ok", mid, key)
+        self.value = value
+
+    def toJSON(self, src):
+        return json.dumps({
+            'src': src,
+            'dst': self.dst,
+            "leader": self.leader,
+            "type" : self.type,
+            "MID" : self.MID,
+            "value" : self.value
+        })
+
+class Put(ClientRPC):
     
+    def __init__(self, src, leader, key, value, MID):
+        self.dst = src
+        self.leader = leader
+        self.key = key
+        self.value = value
+        self.MID = MID
+
+    def handleMessage(self, server):
+        server.state.log.append({ 
+            'entryType': 'put', 
+            'term': server.state.currentTerm,
+            'index': len(self.state.log), 
+            'data': {
+                "key": self.key, 
+                "value": self.value, 
+                'MID': self.MID, 
+                'src': self.dst
+            }
+        })
     
-class AppendEntries(RPC):
+class AppendEntries(ServerRPC):
     leaderId : str
     prevLogIndex : int
     prevLogTerm : int
     leaderCommit: int
     entries : List
 
-    def __init__(self, leaderId, prevLogIndex, prevLogTerm, leaderCommit, entries):
-        self.leaderId = leaderId
+    def __init__(self, src, leader, prevLogIndex, prevLogTerm, leaderCommit, entries, term):
+        super().__init__(term, src, leader, 'ae')
         self.prevLogIndex = prevLogIndex
         self.prevLogTerm = prevLogTerm
         self.entries = entries
         self.leaderCommit = leaderCommit
     
-    def handleMessage(self, server: Server):
+    def handleMessage(self, server):
         """
         Handles an AppendEntries RPC and Sends a Response
         """
-        term_match = self.term  >= server.state.commitIndex
+        term_match = server.state.currentTerm.term  >= server.state.commitIndex
         prev_term_match = self.prevLogTerm in [server.state.log[self.prevLogIndex], None]
         success = not term_match and prev_term_match
 
         if not success:
-            return AppendEntriesResponse(success)
+            return AppendEntriesResponse(self.dst, success, self.term, len(server.state.log))
         else:
             if len(server.state.log) > self.prevLogIndex:
                 server.state.log = server.state.log[:self.prevLogIndex]
@@ -103,59 +189,59 @@ class AppendEntries(RPC):
 
             if self.leaderCommit > server.state.commitIndex:
                 server.state.commitIndex = min(self.leaderCommit, len(server.state.log) - 1)
-        
 
-class RequestVoteResponse(RPC):
+class RequestVoteResponse(ServerRPC):
     """
-    
+    A response to a RequestVote.
     """
     voteGranted: bool
     
-    def __init__(self, src, term, voteGranted: bool) -> None:
-        self.dst = src
-        self.term = term
+    def __init__(self, src, leader, term, voteGranted: bool) -> None:
+        super().__init__(term, src, leader, 'rvr')
         self.voteGranted = voteGranted
-        super().__init__()
 
-    def handleMessage(self, server: Server):
-        pass
+    def handleMessage(self, server):
+        server.controller.votesReceived += 1
+        if(server.controller.votesReceived > server.majority):
+            server.changeController('leader')
 
-    def toJSON(self, leader, src):
+    def toJSON(self, src):
         return json.dumps({
             'src': src,
             'dst': self.dst,
             'term': self.term,
-            'leader': leader,
+            'leader': self.leader,
             'voteGranted': self.voteGranted
         })
     
-class RequestVote(RPC):
+class RequestVote(ServerRPC):
     candidateId : int
     lastLogIndex : int
     lastLogTerm : int
 
-    def __init__(self, candidateId, lastLogIndex, lastLogTerm):
+    def __init__(self, candidateId, lastLogIndex, lastLogTerm, term, leader):
+        super().__init__(term, candidateId, leader, 'rv')
         self.dst = candidateId
         self.candidateId = candidateId
         self.lastLogTerm = lastLogTerm
 
-    def handleMessage(self, server: Server) -> RequestVoteResponse:
+    def handleMessage(self, server) -> RequestVoteResponse:
         """
         Handles a Request Vote Message
         """
         voteGranted = self.term >= server.state.currentTerm \
             or (server.state.votedFor in [None, self.candidateId]
                 and self.lastLogTerm == server.state.log[-1]["term"]) 
-        return RequestVoteResponse(voteGranted)
+        return RequestVoteResponse(server.state.id, server.state.currentTerm, voteGranted)
 
 class Controller:
     name: str
-    event_loop = None
     election_timeout: asyncio.TimerHandle
-    server: Server
+    server = None
     
-    def __init__(self, event_loop, server : Server) -> None:
+    def __init__(self, server):
         self.server = server
+        self.election_timeout = None
 
     def restartElectionTimeout(self):
         if self.election_timeout is not None:
@@ -163,20 +249,28 @@ class Controller:
         timeout = random.randint(60, 150) / 1000
         self.server.event_loop.call_later(timeout, self.server.changeController, "candidate")
 
+    def forwardMessage(self, dst, MID):
+        self.server.event_loop.sock_sendall(self.server.sock, json.dumps({
+            'src': self.server.state.id,
+            'dst': dst,
+            'type': 'redirect',
+            'leader': self.server.state.leader_id
+            'MID': MID
+        }).encode())
+        
 
     def applyRules(self):
         if self.server.state.commitIndex > self.server.state.lastApplied:
             self.server.state.lastApplied += 1
-        
-        
+            toAdd = self.server.state.log[self.server.state.lastApplied]
+            self.server
 
 class Leader(Controller):
     heartbeat: asyncio.TimerHandle
 
-    def __init__(self, event_loop, server) -> None:
-        super().__init__(event_loop, server)
+    def __init__(self, server) -> None:
+        super().__init__(server)
         self.name = "leader"
-        self.server = server
 
     def restartHeartbeat(self):
         if self.heartbeat is not None:
@@ -202,14 +296,12 @@ class Leader(Controller):
     def restartElectionTimeout(self):
         print("Leaders don't have election timeout")
     
-    
 class Candidate(Controller):
     votesReceived: int
     
-    def __init__(self, event_loop, server) -> None:
-        super().__init__(event_loop, server)
+    def __init__(self, server) -> None:
+        super().__init__(server)
         self.name = "candidate"
-        self.server = server
         self.server.state.leader_id = 'FFFF' # TODO is this necessary
         self.server.state.currentTerm += 1
         self.server.state.votedFor = self.server.state.id
@@ -225,50 +317,56 @@ class Candidate(Controller):
             'term': self.server.state.currentTerm,
             'type': 'rv',
             'lastLogIndex': len(self.server.state.log) - 1,
-            'lastLogTerm': self.server.state.log[-1]['term']
+            'lastLogTerm': self.server.state.log[-1]['term'] if self.server.state.log else None
         }).encode())
 
 class Follower(Controller):
     
-    def __init__(self, event_loop, server) -> None:
-        super().__init__(event_loop, server)
+    def __init__(self, server) -> None:
+        super().__init__(server)
         self.name = "follower"
-        self.server = server
         self.restartElectionTimeout()
 
-        
-
-class Servers:
+class Server:
     state: State
     controller: Controller
     rpcfactory: RPCFactory
     sock: socket.socket
     data: Dict
     event_loop = None
+    majority: int
 
     def __init__(self, my_id, replicas, sock):
         self.id = my_id
         self.state = State(my_id, replicas)
         self.rpcfactory = RPCFactory()
         self.sock = sock
+        self.majority = (len(replicas) + 1) / 2
         self.event_loop = asyncio.get_event_loop()
         asyncio.get_event_loop().create_task(self.receive())
-        self.controller = Follower(self.event_loop, self)
+        self.controller = Follower(self)
+        self.event_loop.run_forever()
 
     async def receive(self):
         msg_raw = await self.event_loop.sock_recv(self.sock, 32768)
         if len(msg_raw) != 0:
             msg = json.loads(msg_raw)
             rpc = self.rpcfactory.BuildMessage(msg)
+            print("RPC: " + str(rpc))
             resp = rpc.handleMessage(self.state)
-            self.event_loop.sock_sendall(self.sock, resp.toJSON(self.state.leader_id, self.state.id))
+            self.event_loop.sock_sendall(self.sock, resp.toJSON(self.state.id))
+    
             
             
         asyncio.get_event_loop().create_task(self.receive())
 
-    async def changeController(self, controller_type: str):
+    def changeController(self, controller_type: str):
         if controller_type == "candidate":
-            self.controller = Candidate(self.event_loop, self)
+            self.controller = Candidate(self)
+        elif controller_type == 'follower':
+            self.controller = Follower(self)
+        elif controller_type == 'leader':
+            self.controller = Leader(self)
         
 
 if __name__ == "__main__":
