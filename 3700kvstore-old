@@ -20,23 +20,6 @@ class Database:
 			return ""
 
 
-# class LogEntry:
-# 	entryType: str
-# 	term: int
-# 	data: dict
-# 	index: int
-# 	appends: int
-	
-# 	def __init__(self, entryType: str, term: int, index: int, data: dict):
-# 		self.entryType = entryType
-# 		self.term = term
-# 		self.data = data
-# 		self.appends = 0
-# 		self.index = index
-
-# 	def __str__(self):
-# 		return f'Type: {self.entryType}, Term: {self.term}, Index: {self.index}'
-
 class Server:
 	# persistent data
 	id: int # id of this server
@@ -171,16 +154,6 @@ class Server:
 							self.commitIndex += msg['numApplied']
 					self.replicas[msg['src']]['commitIndex'] = msg['commitIndex']
 					self.replicas[msg['src']]['lastApplied'] = msg['lastApplied']
-							#self.log("New Commit Index:" + str(self.commitIndex))
-							#TODO commit 
-				# if ae_commits[entries] >=  len(self.replica_ids) / 2 + 1:
-				# 	self.sendCommitMessage(msg['entries'])
-
-			# elif msg['type'] == 'commit':
-			# 	if self.state != 'follower':
-			# 		self.log("BAD!!! Received Commit Response when in state", self.state, ". For Entry: ", msg['entries'])
-			# 	self.log("Received AE Response [FROM: " + msg['src'] + "]")
-			# 	self.commitIndex = msg["commitIndex"]
 		self.event_loop.create_task(self.receive())
 
 	#State change methods

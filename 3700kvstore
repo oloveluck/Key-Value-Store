@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-import sys, socket, select, time, json, random, asyncio
+import sys, socket, select, time, json, random, asyncio, math
 from typing import List, Dict
 
-class Server:
-    pass
+DEBUG = False
 
 class State:
     id: str
@@ -24,8 +23,6 @@ class State:
     def __init__(self, my_id, replica_ids):
         self.id = my_id
         self.replicas = replica_ids
-        self.nextIndex = { replica: 0 for replica in replica_ids }
-        self.matchIndex = { replica: 0 for replica in replica_ids }
         self.leader_id = 'FFFF'
         self.votedFor = None
         self.log = []
@@ -54,6 +51,13 @@ class ServerRPC(RPC):
     def __init__(self, term, dst, msg_type):
         super().__init__(dst, msg_type)
         self.term = term
+        
+    def handleMessage(self, server):
+        if self.term > server.state.currentTerm:
+            server.state.currentTerm = self.term
+            server.changeController("follower")
+            server.state.leader_id = self.dst
+            print(server.state.id, " changed to a follower")
 
 class RPCFactory:
     def BuildMessage(self, msg) -> RPC:
@@ -63,13 +67,13 @@ class RPCFactory:
         if msg["type"] == "rv":
             return RequestVote(msg['src'], msg['lastLogIndex'], msg['lastLogTerm'], msg['term'])
         elif msg['type'] == 'ae':
-            return AppendEntries(msg['src'], msg['prevLogIndex'], msg['prevLogTerm'], msg['leaderCommit'], msg['entries'], msg['term'])
+                  return AppendEntries(msg['src'], msg['prevLogIndex'], msg['prevLogTerm'], msg['leaderCommit'], msg['entries'], msg['term'])
         elif msg['type'] == 'aer':
             return AppendEntriesResponse(msg['src'], msg['success'], msg['term'], msg['matchIndex'])
         elif msg['type'] == 'rvr':
             return RequestVoteResponse(msg['src'], msg['voteGranted'], msg['term'])
         elif msg['type'] == 'get':
-            return Get(msg['src'], msg['key'], msg['term'])
+            return Get(msg['src'], msg['key'], msg['MID'])
         elif msg['type'] == 'put':
             return Put(msg['src'], msg['key'], msg['value'], msg['MID'])
         else:
@@ -95,17 +99,17 @@ class Get(ClientRPC):
     def __init__(self, src, key, MID):
         super().__init__(src, "get", MID, key)
 
-    def handleMessage(self, server: Server):
-        if self.leader != server.leader:
+    def handleMessage(self, server):
+        if server.controller.name != 'leader':
             ## forward message to the leader
-            return ForwardMessage(self.dst, self.MID)
+            return [ForwardMessage(self.dst, self.MID)]
         else:
-            return GetResponse(self.MID, self.dst, self.key, server.data[self.key] if self.key in server.data else "")
+            return [GetResponse(self.MID, self.dst, self.key, server.data[self.key] if self.key in server.data else "")]
 
 class GetResponse(ClientRPC):
     value: str
-    def __init__(self, mid : str, dst : str, key : str, value : str):
-        super().__init__(src, "ok", mid, key)
+    def __init__(self, mid: str, dst: str, key: str, value: str):
+        super().__init__(dst, "ok", mid, key)
         self.value = value
 
     def toJSON(self, src, leader):
@@ -125,6 +129,9 @@ class Put(ClientRPC):
         self.value = value
 
     def handleMessage(self, server):
+        if server.controller.name != 'leader':
+            ## forward message to the leader
+            return [ForwardMessage(self.dst, self.MID)] 
         server.state.log.append({ 
             'entryType': 'put', 
             'term': server.state.currentTerm,
@@ -148,8 +155,7 @@ class PutResponse(ClientRPC):
             'dst': self.dst,
             'leader': leader,
             'type': self.msg_type,
-            'MID': self.MID,
-            'value': self.value
+            'MID': self.MID
         })
 
 class AppendEntriesResponse(ServerRPC):
@@ -160,6 +166,31 @@ class AppendEntriesResponse(ServerRPC):
         super().__init__(term, src, 'aer')
         self.success = success
         self.matchIndex = matchIndex
+    
+    def median(self, l: List):
+        l = sorted(l)
+        return l[math.floor(len(l) / 2)]
+        
+        
+
+    def handleMessage(self, server):
+        super().handleMessage(server)
+        if self.success:
+            server.state.nextIndex[self.dst] = self.matchIndex + 1
+            server.state.matchIndex[self.dst] = self.matchIndex
+            if server.controller.name == "leader":
+                majorityCommitted = self.median(server.state.matchIndex.values())
+                if majorityCommitted > server.state.commitIndex:
+                    oldCommitIndex = server.state.commitIndex
+                    server.state.commitIndex = majorityCommitted
+                    responses = []
+                    for entry in server.state.log[oldCommitIndex:server.state.commitIndex]:
+                        data = entry['data']
+                        server.data[data["key"]] = data["value"]
+                        responses.append(GetResponse(data['MID'], data['src'], data['key'], data['value']))
+                    return responses
+        else:
+            server.state.nextIndex[self.dst] = max(server.state.nextIndex[self.dst], 0)
 
     def toJSON(self, src, leader):
         return json.dumps({
@@ -188,19 +219,20 @@ class AppendEntries(ServerRPC):
         """
         Handles an AppendEntries RPC and Sends a Response
         """
-        term_match = server.state.currentTerm.term  >= server.state.commitIndex
-        prev_term_match = self.prevLogTerm in [server.state.log[self.prevLogIndex], None]
-        success = not term_match and prev_term_match
+        server.controller.restartElectionTimeout()
+        super().handleMessage(server)
+        term_match: bool = server.state.currentTerm >= self.term
+        entry_match: bool = self.prevLogTerm is None or (len(server.state.log) != 0 and self.prevLogTerm == server.state.log[self.prevLogIndex]['term'])
+        success = term_match and entry_match
 
-        if not success:
-            return AppendEntriesResponse(self.dst, success, self.term, len(server.state.log))
-        else:
-            if len(server.state.log) > self.prevLogIndex:
-                server.state.log = server.state.log[:self.prevLogIndex]
-            server.state.log += self.entries
-
-            if self.leaderCommit > server.state.commitIndex:
-                server.state.commitIndex = min(self.leaderCommit, len(server.state.log) - 1)
+        if success and server.controller.name == "follower": #TODO revisit when concerned about mismatched logs 
+        #     if server.state.commitIndex > self.prevLogIndex: # if this server's log is different from leaders
+        #         server.state.log = server.state.log[:self.prevLogIndex] # remove all different
+            server.state.log += self.entries # add all from leader
+            server.log("Follower Log: " + json.dumps(server.state.log))
+            if self.leaderCommit > server.state.commitIndex: # raft paper: AppendEntries: #5
+                server.state.commitIndex = min(self.leaderCommit, len(server.state.log))
+        return [AppendEntriesResponse(self.dst, success, self.term, len(server.state.log))]
 
 class RequestVoteResponse(ServerRPC):
     """
@@ -213,7 +245,8 @@ class RequestVoteResponse(ServerRPC):
         self.voteGranted = voteGranted
 
     def handleMessage(self, server):
-        if server.controller.name == 'candidate':
+        super().handleMessage(server)
+        if server.controller.name == 'candidate' and self.voteGranted:
             server.controller.votesReceived += 1
             if(server.controller.votesReceived > server.majority):
                 server.changeController('leader')
@@ -243,10 +276,13 @@ class RequestVote(ServerRPC):
         """
         Handles a Request Vote Message
         """
+        super().handleMessage(server)
         voteGranted = self.term >= server.state.currentTerm \
-            or (server.state.votedFor in [None, self.candidateId]
-                and self.lastLogTerm == server.state.log[-1]["term"]) 
-        return RequestVoteResponse(server.state.id, server.state.currentTerm, voteGranted)
+            and (server.state.votedFor in [None, self.candidateId]
+                and (self.lastLogTerm is None or self.lastLogTerm == server.state.log[-1]["term"]))
+        if voteGranted:
+            server.controller.restartElectionTimeout()
+        return [RequestVoteResponse(self.candidateId, server.state.currentTerm, voteGranted)]
 
 class Controller:
     name: str
@@ -256,49 +292,57 @@ class Controller:
     def __init__(self, name, server):
         self.server = server
         self.name = name
+        server.state.leader_id = 'FFFF'
         self.election_timeout = None
 
     def restartElectionTimeout(self):
         if self.election_timeout is not None:
             self.election_timeout.cancel()
         timeout = random.randint(60, 150) / 1000
-        self.server.event_loop.call_later(timeout, self.server.changeController, "candidate")
+        self.election_timeout = self.server.event_loop.call_later(timeout, self.server.changeController, "candidate")
         
 
     def applyRules(self):
         if self.server.state.commitIndex > self.server.state.lastApplied:
             self.server.state.lastApplied += 1
-            toAdd = self.server.state.log[self.server.state.lastApplied]
-            self.server
-
+            toAdd = self.server.state.log[self.server.state.lastApplied]["data"]
+            self.server.data[toAdd["key"]] = toAdd["value"]
+            
 class Leader(Controller):
     heartbeat: asyncio.TimerHandle
+    commitCount : int
 
     def __init__(self, server) -> None:
         super().__init__("leader", server)
+        server.log("Became a leader")
+        self.server.state.leader_id = self.server.state.id
+        self.server.state.matchIndex = { replica: 0 for replica in server.state.replicas }
+        self.server.state.nextIndex = { replica: server.state.commitIndex + 1 for replica in server.state.replicas }
         self.heartbeat = None
         self.restartHeartbeat()
+        self.commitCount = 0
 
     def restartHeartbeat(self):
         if self.heartbeat is not None:
             self.heartbeat.cancel()
+        #self.server.log("Leader LOG: " + json.dumps(self.server.state.log))
         [self.server.event_loop.create_task(self.sendAEMessage(replica)) for replica in self.server.state.replicas]
         timeout = random.randint(30, 50) / 1000
-        self.server.event_loop.call_later(timeout, self.restartHeartbeat)
+        self.heartbeat = self.server.event_loop.call_later(timeout, self.restartHeartbeat)
 
     async def sendAEMessage(self, replica_id):
-        nextIndex = self.server.state.nextIndex[replica_id]
+        nextIndex = self.server.state.nextIndex[replica_id] - 1
         self.server.event_loop.sock_sendall(self.server.sock, json.dumps({
             "type": "ae",
             "term": self.server.state.currentTerm,
             "src": self.server.state.id,
             'dst': replica_id,
             'leader': self.server.state.leader_id,
-            "entries" : self.server.state.log[nextIndex:nextIndex + 50],
+            "entries" : self.server.state.log[nextIndex: nextIndex + 50], # TODO batch
             "leaderCommit" : self.server.state.commitIndex,
-            'prevLogindex': nextIndex - 1,
-            'prevLogTerm': self.server.state.log[nextIndex - 1]['term']
-        }))
+            'prevLogIndex': nextIndex - 1,
+            'prevLogTerm': self.server.state.log[nextIndex - 1]['term'] if nextIndex > 0 and self.server.state.log else None 
+        }).encode())
 
     def restartElectionTimeout(self):
         print("Leaders don't have election timeout")
@@ -308,6 +352,7 @@ class Candidate(Controller):
     
     def __init__(self, server) -> None:
         super().__init__("candidate", server)
+        server.log("Became a Candidate")
         self.server.state.leader_id = 'FFFF' # TODO is this necessary
         self.server.state.currentTerm += 1
         self.server.state.votedFor = self.server.state.id
@@ -330,6 +375,7 @@ class Follower(Controller):
     
     def __init__(self, server) -> None:
         super().__init__("follower", server)
+        server.log("Became a follower")
         self.restartElectionTimeout()
 
 class Server:
@@ -341,12 +387,20 @@ class Server:
     event_loop = None
     majority: int
 
+    def log(self, message, dest=None):
+        if DEBUG:
+            message = f'[{round(time.time() * 1000)}][Host: {self.state.id}] {message} {"[To: " + dest + "]" if dest else ""}\n'
+            self.logFile.write(message)
+            print(message)
+
     def __init__(self, my_id, replicas, sock):
-        self.id = my_id
         self.state = State(my_id, replicas)
+        if DEBUG:
+            self.logFile = open("output" + self.state.id + ".txt", "w")
         self.rpcfactory = RPCFactory()
         self.sock = sock
         self.majority = (len(replicas) + 1) / 2
+        self.data = {}
         self.event_loop = asyncio.get_event_loop()
         asyncio.get_event_loop().create_task(self.receive())
         self.event_loop.set_debug(True) # TODO remove
@@ -358,13 +412,18 @@ class Server:
         if len(msg_raw) != 0:
             msg = json.loads(msg_raw)
             rpc = self.rpcfactory.BuildMessage(msg)
-            print("RPC: " + str(rpc))
-            resp = rpc.handleMessage(self)
-            if resp is not None:
-                self.event_loop.sock_sendall(self.sock, resp.toJSON(self.state.id, self.state.leader_id).encode())  
+            self.log("HOST RECEIVED: " + json.dumps(msg))
+            responses = rpc.handleMessage(self)
+            if responses is not None:
+                for resp in responses:
+                    if resp.msg_type == 'redirect':
+                        self.log("Forwarding message to " + resp.dst)
+                    self.event_loop.sock_sendall(self.sock, resp.toJSON(self.state.id, self.state.leader_id).encode())  
         asyncio.get_event_loop().create_task(self.receive())
 
     def changeController(self, controller_type: str):
+        if self.controller.election_timeout is not None:
+            self.controller.election_timeout.cancel()
         if controller_type == "candidate":
             self.controller = Candidate(self)
         elif controller_type == 'follower':
