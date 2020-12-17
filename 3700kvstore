@@ -3,7 +3,7 @@
 import sys, socket, select, time, json, random, asyncio, math
 from typing import List, Dict
 
-DEBUG = False
+DEBUG = True
 
 class State:
     id: str
@@ -219,6 +219,8 @@ class AppendEntries(ServerRPC):
         """
         Handles an AppendEntries RPC and Sends a Response
         """
+        if server.controller.name == "leader":
+            raise Exception("Leader received an append entries")
         server.controller.restartElectionTimeout()
         super().handleMessage(server)
         term_match: bool = server.state.currentTerm >= self.term
@@ -424,7 +426,7 @@ class Server:
     def changeController(self, controller_type: str):
         if self.controller.election_timeout is not None:
             self.controller.election_timeout.cancel()
-        if controller_type == "candidate":
+        if controller_type == "candidate": # TODO check if the candidate is up to date:
             self.controller = Candidate(self)
         elif controller_type == 'follower':
             self.controller = Follower(self)

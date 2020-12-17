@@ -1,0 +1,1116 @@
+[1608221810161][Host: 0003] Became a follower 
+[1608221810250][Host: 0003] HOST RECEIVED: {"src": "0002", "dst": "0003", "leader": "FFFF", "term": 1, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221810250][Host: 0003] Became a follower 
+[1608221810251][Host: 0003] HOST RECEIVED: {"src": "0001", "dst": "0003", "leader": "FFFF", "term": 1, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221810256][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810257][Host: 0003] Follower Log: [] 
+[1608221810258][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810258][Host: 0003] Follower Log: [] 
+[1608221810297][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810297][Host: 0003] Follower Log: [] 
+[1608221810301][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810301][Host: 0003] Follower Log: [] 
+[1608221810335][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810336][Host: 0003] Follower Log: [] 
+[1608221810338][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810339][Host: 0003] Follower Log: [] 
+[1608221810371][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810372][Host: 0003] Follower Log: [] 
+[1608221810388][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810389][Host: 0003] Follower Log: [] 
+[1608221810407][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810408][Host: 0003] Follower Log: [] 
+[1608221810435][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810435][Host: 0003] Follower Log: [] 
+[1608221810459][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810459][Host: 0003] Follower Log: [] 
+[1608221810472][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810472][Host: 0003] Follower Log: [] 
+[1608221810508][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810509][Host: 0003] Follower Log: [] 
+[1608221810511][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810511][Host: 0003] Follower Log: [] 
+[1608221810548][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810549][Host: 0003] Follower Log: [] 
+[1608221810551][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810552][Host: 0003] Follower Log: [] 
+[1608221810581][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810581][Host: 0003] Follower Log: [] 
+[1608221810604][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810605][Host: 0003] Follower Log: [] 
+[1608221810614][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810615][Host: 0003] Follower Log: [] 
+[1608221810636][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810637][Host: 0003] Follower Log: [] 
+[1608221810652][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810653][Host: 0003] Follower Log: [] 
+[1608221810684][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810684][Host: 0003] Follower Log: [] 
+[1608221810702][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810702][Host: 0003] Follower Log: [] 
+[1608221810718][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810718][Host: 0003] Follower Log: [] 
+[1608221810736][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810736][Host: 0003] Follower Log: [] 
+[1608221810762][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810763][Host: 0003] Follower Log: [] 
+[1608221810775][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810776][Host: 0003] Follower Log: [] 
+[1608221810801][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810802][Host: 0003] Follower Log: [] 
+[1608221810823][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810824][Host: 0003] Follower Log: [] 
+[1608221810849][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810850][Host: 0003] Follower Log: [] 
+[1608221810862][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810863][Host: 0003] Follower Log: [] 
+[1608221810896][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810897][Host: 0003] Follower Log: [] 
+[1608221810898][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810898][Host: 0003] Follower Log: [] 
+[1608221810938][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810939][Host: 0003] Follower Log: [] 
+[1608221810946][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810946][Host: 0003] Follower Log: [] 
+[1608221810975][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810975][Host: 0003] Follower Log: [] 
+[1608221810992][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221810993][Host: 0003] Follower Log: [] 
+[1608221811024][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811025][Host: 0003] Follower Log: [] 
+[1608221811026][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811027][Host: 0003] Follower Log: [] 
+[1608221811059][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811059][Host: 0003] Follower Log: [] 
+[1608221811067][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811067][Host: 0003] Follower Log: [] 
+[1608221811104][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811104][Host: 0003] Follower Log: [] 
+[1608221811108][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811109][Host: 0003] Follower Log: [] 
+[1608221811141][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811142][Host: 0003] Follower Log: [] 
+[1608221811143][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811144][Host: 0003] Follower Log: [] 
+[1608221811184][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811184][Host: 0003] Follower Log: [] 
+[1608221811189][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811189][Host: 0003] Follower Log: [] 
+[1608221811216][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811217][Host: 0003] Follower Log: [] 
+[1608221811229][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811229][Host: 0003] Follower Log: [] 
+[1608221811248][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811248][Host: 0003] Follower Log: [] 
+[1608221811279][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811280][Host: 0003] Follower Log: [] 
+[1608221811289][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811289][Host: 0003] Follower Log: [] 
+[1608221811321][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811322][Host: 0003] Follower Log: [] 
+[1608221811323][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811324][Host: 0003] Follower Log: [] 
+[1608221811362][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811363][Host: 0003] Follower Log: [] 
+[1608221811369][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811370][Host: 0003] Follower Log: [] 
+[1608221811404][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811405][Host: 0003] Follower Log: [] 
+[1608221811410][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811411][Host: 0003] Follower Log: [] 
+[1608221811453][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811454][Host: 0003] Follower Log: [] 
+[1608221811458][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811459][Host: 0003] Follower Log: [] 
+[1608221811495][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811495][Host: 0003] Follower Log: [] 
+[1608221811496][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811497][Host: 0003] Follower Log: [] 
+[1608221811529][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811529][Host: 0003] Follower Log: [] 
+[1608221811547][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811547][Host: 0003] Follower Log: [] 
+[1608221811576][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811577][Host: 0003] Follower Log: [] 
+[1608221811586][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811587][Host: 0003] Follower Log: [] 
+[1608221811620][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811620][Host: 0003] Follower Log: [] 
+[1608221811637][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811637][Host: 0003] Follower Log: [] 
+[1608221811669][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811670][Host: 0003] Follower Log: [] 
+[1608221811677][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811677][Host: 0003] Follower Log: [] 
+[1608221811722][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811723][Host: 0003] Follower Log: [] 
+[1608221811725][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811725][Host: 0003] Follower Log: [] 
+[1608221811763][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811763][Host: 0003] Follower Log: [] 
+[1608221811773][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811774][Host: 0003] Follower Log: [] 
+[1608221811805][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811805][Host: 0003] Follower Log: [] 
+[1608221811823][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811823][Host: 0003] Follower Log: [] 
+[1608221811842][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811842][Host: 0003] Follower Log: [] 
+[1608221811863][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811864][Host: 0003] Follower Log: [] 
+[1608221811881][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811882][Host: 0003] Follower Log: [] 
+[1608221811895][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811896][Host: 0003] Follower Log: [] 
+[1608221811923][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811924][Host: 0003] Follower Log: [] 
+[1608221811947][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811948][Host: 0003] Follower Log: [] 
+[1608221811964][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811964][Host: 0003] Follower Log: [] 
+[1608221811995][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221811995][Host: 0003] Follower Log: [] 
+[1608221812000][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812000][Host: 0003] Follower Log: [] 
+[1608221812040][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812040][Host: 0003] Follower Log: [] 
+[1608221812051][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812051][Host: 0003] Follower Log: [] 
+[1608221812084][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812084][Host: 0003] Follower Log: [] 
+[1608221812087][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812089][Host: 0003] Follower Log: [] 
+[1608221812120][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812121][Host: 0003] Follower Log: [] 
+[1608221812130][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812131][Host: 0003] Follower Log: [] 
+[1608221812158][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "R390KB5UQ8WXQZW0", "value": "2ce2b654b3ca3bfe3ce8a3390ecddaf6", "key": "1J95ECM7OJXUSVYMKD4V7G9FN7HGK8EO", "type": "put", "leader": "FFFF"} 
+[1608221812158][Host: 0003] Forwarding message to 001A 
+[1608221812159][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812159][Host: 0003] Follower Log: [] 
+[1608221812179][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812179][Host: 0003] Follower Log: [] 
+[1608221812198][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812198][Host: 0003] Follower Log: [] 
+[1608221812231][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812231][Host: 0003] Follower Log: [] 
+[1608221812239][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812239][Host: 0003] Follower Log: [] 
+[1608221812276][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812276][Host: 0003] Follower Log: [] 
+[1608221812283][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812284][Host: 0003] Follower Log: [] 
+[1608221812320][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812320][Host: 0003] Follower Log: [] 
+[1608221812336][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812336][Host: 0003] Follower Log: [] 
+[1608221812366][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812366][Host: 0003] Follower Log: [] 
+[1608221812372][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812372][Host: 0003] Follower Log: [] 
+[1608221812404][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812405][Host: 0003] Follower Log: [] 
+[1608221812420][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812421][Host: 0003] Follower Log: [] 
+[1608221812445][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812445][Host: 0003] Follower Log: [] 
+[1608221812455][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812455][Host: 0003] Follower Log: [] 
+[1608221812495][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812495][Host: 0003] Follower Log: [] 
+[1608221812504][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812504][Host: 0003] Follower Log: [] 
+[1608221812535][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812535][Host: 0003] Follower Log: [] 
+[1608221812549][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812549][Host: 0003] Follower Log: [] 
+[1608221812568][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "1SSGNAF56YU7CRGO", "value": "a55bb852dde51aacd7db3063677294ec", "key": "EA2GVIX7WO2MULAPDACVKRYHXSXDMR0S", "type": "put", "leader": "FFFF"} 
+[1608221812568][Host: 0003] Forwarding message to 0015 
+[1608221812569][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812570][Host: 0003] Follower Log: [] 
+[1608221812597][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812598][Host: 0003] Follower Log: [] 
+[1608221812616][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812616][Host: 0003] Follower Log: [] 
+[1608221812642][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812642][Host: 0003] Follower Log: [] 
+[1608221812662][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812662][Host: 0003] Follower Log: [] 
+[1608221812675][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812675][Host: 0003] Follower Log: [] 
+[1608221812701][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812702][Host: 0003] Follower Log: [] 
+[1608221812720][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812720][Host: 0003] Follower Log: [] 
+[1608221812755][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812755][Host: 0003] Follower Log: [] 
+[1608221812766][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812767][Host: 0003] Follower Log: [] 
+[1608221812801][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812801][Host: 0003] Follower Log: [] 
+[1608221812808][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812808][Host: 0003] Follower Log: [] 
+[1608221812837][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812837][Host: 0003] Follower Log: [] 
+[1608221812860][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812860][Host: 0003] Follower Log: [] 
+[1608221812886][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812887][Host: 0003] Follower Log: [] 
+[1608221812895][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812895][Host: 0003] Follower Log: [] 
+[1608221812922][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812922][Host: 0003] Follower Log: [] 
+[1608221812934][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812935][Host: 0003] Follower Log: [] 
+[1608221812958][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812959][Host: 0003] Follower Log: [] 
+[1608221812983][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0001", "dst": "0003", "leader": "0001", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221812983][Host: 0003] Follower Log: [] 
+[1608221813000][Host: 0003] HOST RECEIVED: {"type": "ae", "term": 1, "src": "0002", "dst": "0003", "leader": "0002", "entries": [], "leaderCommit": 0, "prevLogIndex": -1, "prevLogTerm": null} 
+[1608221813000][Host: 0003] Follower Log: [] 
+[1608221813125][Host: 0003] Became a Candidate 
+[1608221813209][Host: 0003] Became a Candidate 
+[1608221813278][Host: 0003] Became a Candidate 
+[1608221813411][Host: 0003] Became a Candidate 
+[1608221813540][Host: 0003] Became a Candidate 
+[1608221813680][Host: 0003] Became a Candidate 
+[1608221813782][Host: 0003] Became a Candidate 
+[1608221813929][Host: 0003] Became a Candidate 
+[1608221814024][Host: 0003] Became a Candidate 
+[1608221814170][Host: 0003] Became a Candidate 
+[1608221814251][Host: 0003] Became a Candidate 
+[1608221814316][Host: 0003] Became a Candidate 
+[1608221814402][Host: 0003] Became a Candidate 
+[1608221814464][Host: 0003] Became a Candidate 
+[1608221814559][Host: 0003] Became a Candidate 
+[1608221814669][Host: 0003] Became a Candidate 
+[1608221814792][Host: 0003] Became a Candidate 
+[1608221814888][Host: 0003] Became a Candidate 
+[1608221815006][Host: 0003] Became a Candidate 
+[1608221815089][Host: 0003] Became a Candidate 
+[1608221815230][Host: 0003] Became a Candidate 
+[1608221815299][Host: 0003] Became a Candidate 
+[1608221815386][Host: 0003] Became a Candidate 
+[1608221815486][Host: 0003] Became a Candidate 
+[1608221815604][Host: 0003] Became a Candidate 
+[1608221815725][Host: 0003] Became a Candidate 
+[1608221815812][Host: 0003] Became a Candidate 
+[1608221815920][Host: 0003] Became a Candidate 
+[1608221816012][Host: 0003] Became a Candidate 
+[1608221816134][Host: 0003] Became a Candidate 
+[1608221816274][Host: 0003] Became a Candidate 
+[1608221816367][Host: 0003] Became a Candidate 
+[1608221816445][Host: 0003] Became a Candidate 
+[1608221816575][Host: 0003] Became a Candidate 
+[1608221816704][Host: 0003] Became a Candidate 
+[1608221816812][Host: 0003] Became a Candidate 
+[1608221816951][Host: 0003] Became a Candidate 
+[1608221817073][Host: 0003] Became a Candidate 
+[1608221817143][Host: 0003] Became a Candidate 
+[1608221817294][Host: 0003] Became a Candidate 
+[1608221817403][Host: 0003] Became a Candidate 
+[1608221817552][Host: 0003] Became a Candidate 
+[1608221817661][Host: 0003] Became a Candidate 
+[1608221817789][Host: 0003] Became a Candidate 
+[1608221817896][Host: 0003] Became a Candidate 
+[1608221817970][Host: 0003] Became a Candidate 
+[1608221818061][Host: 0003] Became a Candidate 
+[1608221818198][Host: 0003] Became a Candidate 
+[1608221818328][Host: 0003] Became a Candidate 
+[1608221818451][Host: 0003] Became a Candidate 
+[1608221818519][Host: 0003] Became a Candidate 
+[1608221818641][Host: 0003] Became a Candidate 
+[1608221818783][Host: 0003] Became a Candidate 
+[1608221818865][Host: 0003] Became a Candidate 
+[1608221819014][Host: 0003] Became a Candidate 
+[1608221819082][Host: 0003] Became a Candidate 
+[1608221819151][Host: 0003] Became a Candidate 
+[1608221819247][Host: 0003] Became a Candidate 
+[1608221819312][Host: 0003] Became a Candidate 
+[1608221819454][Host: 0003] Became a Candidate 
+[1608221819524][Host: 0003] Became a Candidate 
+[1608221819616][Host: 0003] Became a Candidate 
+[1608221819722][Host: 0003] Became a Candidate 
+[1608221819816][Host: 0003] Became a Candidate 
+[1608221819946][Host: 0003] Became a Candidate 
+[1608221820030][Host: 0003] Became a Candidate 
+[1608221820173][Host: 0003] Became a Candidate 
+[1608221820291][Host: 0003] Became a Candidate 
+[1608221820355][Host: 0003] Became a Candidate 
+[1608221820478][Host: 0003] Became a Candidate 
+[1608221820579][Host: 0003] Became a Candidate 
+[1608221820704][Host: 0003] Became a Candidate 
+[1608221820835][Host: 0003] Became a Candidate 
+[1608221820908][Host: 0003] Became a Candidate 
+[1608221821020][Host: 0003] Became a Candidate 
+[1608221821171][Host: 0003] Became a Candidate 
+[1608221821260][Host: 0003] Became a Candidate 
+[1608221821360][Host: 0003] Became a Candidate 
+[1608221821467][Host: 0003] Became a Candidate 
+[1608221821583][Host: 0003] Became a Candidate 
+[1608221821729][Host: 0003] Became a Candidate 
+[1608221821811][Host: 0003] Became a Candidate 
+[1608221821961][Host: 0003] Became a Candidate 
+[1608221822040][Host: 0003] Became a Candidate 
+[1608221822132][Host: 0003] Became a Candidate 
+[1608221822200][Host: 0003] Became a Candidate 
+[1608221822328][Host: 0003] Became a Candidate 
+[1608221822412][Host: 0003] Became a Candidate 
+[1608221822515][Host: 0003] Became a Candidate 
+[1608221822592][Host: 0003] Became a Candidate 
+[1608221822704][Host: 0003] Became a Candidate 
+[1608221822852][Host: 0003] Became a Candidate 
+[1608221822922][Host: 0003] Became a Candidate 
+[1608221823075][Host: 0003] Became a Candidate 
+[1608221823142][Host: 0003] Became a Candidate 
+[1608221823278][Host: 0003] Became a Candidate 
+[1608221823355][Host: 0003] Became a Candidate 
+[1608221823423][Host: 0003] Became a Candidate 
+[1608221823515][Host: 0003] Became a Candidate 
+[1608221823606][Host: 0003] Became a Candidate 
+[1608221823729][Host: 0003] Became a Candidate 
+[1608221823849][Host: 0003] Became a Candidate 
+[1608221823938][Host: 0003] Became a Candidate 
+[1608221824020][Host: 0003] Became a Candidate 
+[1608221824131][Host: 0003] Became a Candidate 
+[1608221824231][Host: 0003] Became a Candidate 
+[1608221824312][Host: 0003] Became a Candidate 
+[1608221824421][Host: 0003] Became a Candidate 
+[1608221824556][Host: 0003] Became a Candidate 
+[1608221824622][Host: 0003] Became a Candidate 
+[1608221824731][Host: 0003] Became a Candidate 
+[1608221824797][Host: 0003] Became a Candidate 
+[1608221824893][Host: 0003] Became a Candidate 
+[1608221824971][Host: 0003] Became a Candidate 
+[1608221825055][Host: 0003] Became a Candidate 
+[1608221825159][Host: 0003] Became a Candidate 
+[1608221825286][Host: 0003] Became a Candidate 
+[1608221825378][Host: 0003] Became a Candidate 
+[1608221825481][Host: 0003] Became a Candidate 
+[1608221825613][Host: 0003] Became a Candidate 
+[1608221825695][Host: 0003] Became a Candidate 
+[1608221825813][Host: 0003] Became a Candidate 
+[1608221825903][Host: 0003] Became a Candidate 
+[1608221826035][Host: 0003] Became a Candidate 
+[1608221826127][Host: 0003] Became a Candidate 
+[1608221826240][Host: 0003] Became a Candidate 
+[1608221826392][Host: 0003] Became a Candidate 
+[1608221826460][Host: 0003] Became a Candidate 
+[1608221826560][Host: 0003] Became a Candidate 
+[1608221826638][Host: 0003] Became a Candidate 
+[1608221826785][Host: 0003] Became a Candidate 
+[1608221826899][Host: 0003] Became a Candidate 
+[1608221826995][Host: 0003] Became a Candidate 
+[1608221827104][Host: 0003] Became a Candidate 
+[1608221827227][Host: 0003] Became a Candidate 
+[1608221827292][Host: 0003] Became a Candidate 
+[1608221827401][Host: 0003] Became a Candidate 
+[1608221827469][Host: 0003] Became a Candidate 
+[1608221827593][Host: 0003] Became a Candidate 
+[1608221827695][Host: 0003] Became a Candidate 
+[1608221827787][Host: 0003] Became a Candidate 
+[1608221827917][Host: 0003] Became a Candidate 
+[1608221828009][Host: 0003] Became a Candidate 
+[1608221828092][Host: 0003] Became a Candidate 
+[1608221828168][Host: 0003] Became a Candidate 
+[1608221828284][Host: 0003] Became a Candidate 
+[1608221828374][Host: 0003] Became a Candidate 
+[1608221828494][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "KJSVNIHB0VXRP46A", "value": "671d74d4ce8815e5ff3dfd807b58442e", "key": "0PHIXS5B5QE920UKKU3QXXPJ7V2WBTTW", "type": "put", "leader": "FFFF"} 
+[1608221828494][Host: 0003] Forwarding message to 0017 
+[1608221828495][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "IW2TDMYAONW3ONB0", "value": "f3f46ff0dbaa4924b337c9340b3245b6", "key": "ZUIYUF4MZBAZ6VAAD5X2TYO3SD4GLAYL", "type": "put", "leader": "FFFF"} 
+[1608221828495][Host: 0003] Forwarding message to 001B 
+[1608221828497][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "KMQU5JJI4CG2N10D", "value": "8473c31e37ca436a44c3507f46bf5ce5", "key": "WY5YLPA5MWXBGXYN6Y4L9D60VLGVOZXX", "type": "put", "leader": "FFFF"} 
+[1608221828497][Host: 0003] Forwarding message to 001A 
+[1608221828498][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "AL62MP5KNH0VZINE", "value": "07d43417470b94ca48775f68316c9ff6", "key": "O5NGYPE0L9YL0AZM1316YG1D8MFF8TZY", "type": "put", "leader": "FFFF"} 
+[1608221828498][Host: 0003] Forwarding message to 0018 
+[1608221828499][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "VFOIZLXHS2FGKX9W", "value": "f11af7c2d0d2aff87f55ab063e163182", "key": "RKP4ZSO36O69S2TSEN41WWAQ60BSZEUP", "type": "put", "leader": "FFFF"} 
+[1608221828499][Host: 0003] Forwarding message to 001B 
+[1608221828500][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "1N0CB4NH7DRBREPB", "value": "a155dafd35cd3aa211ad3a132952937b", "key": "I9ZBRIBPAKNUNKZQ8MFVZ5AUFMZTAKGI", "type": "put", "leader": "FFFF"} 
+[1608221828500][Host: 0003] Forwarding message to 001C 
+[1608221828503][Host: 0003] Became a Candidate 
+[1608221828608][Host: 0003] Became a Candidate 
+[1608221828750][Host: 0003] Became a Candidate 
+[1608221828875][Host: 0003] Became a Candidate 
+[1608221829010][Host: 0003] Became a Candidate 
+[1608221829141][Host: 0003] Became a Candidate 
+[1608221829201][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "H6JATNM4NBOS7K31", "value": "05e15e73e73a20e66e0cad43d5e1ad5a", "key": "ABNBU6954GWYV2AUQA8YZRFFSIOWED3E", "type": "put", "leader": "FFFF"} 
+[1608221829201][Host: 0003] Forwarding message to 001A 
+[1608221829202][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "MMP6SLX7IQU8DYAX", "value": "db4e97b24122f1b9b4b63cdb0ee71661", "key": "09WCYAY8052834312B3A89MF58R9G6YG", "type": "put", "leader": "FFFF"} 
+[1608221829203][Host: 0003] Forwarding message to 001A 
+[1608221829204][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "T7SPKDB2PON8SVRE", "value": "728ff749d08e3553e1b4a53227c1317f", "key": "TOWFPMEIJ2VOLB680EKLQRDJOJWE3EH8", "type": "put", "leader": "FFFF"} 
+[1608221829204][Host: 0003] Forwarding message to 0018 
+[1608221829204][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "8MSN83YQWZ9ASOUA", "value": "a0919a82daae3ef173269d4e291ca13c", "key": "OUPT0TFB8XX70WAW2P5FUGL2IMHUPW0T", "type": "put", "leader": "FFFF"} 
+[1608221829204][Host: 0003] Forwarding message to 0018 
+[1608221829205][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "FQG4BH621H1PZFEO", "value": "33f0b87cc093169fa3720284a6ca698b", "key": "MC6A77QT4LDSMLK8RU8WRBEYUMT0MG4W", "type": "put", "leader": "FFFF"} 
+[1608221829205][Host: 0003] Forwarding message to 0017 
+[1608221829205][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "5CIS827NW5U7PO80", "value": "deadfe54c587dc1c6ae3e79bb396b285", "key": "H6DTH6RHMH3PKU3X3FE7KRKBZ5PAPLU7", "type": "put", "leader": "FFFF"} 
+[1608221829205][Host: 0003] Forwarding message to 001C 
+[1608221829206][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "QCQG9FFGKF2SOIVP", "value": "8e1b082eb816c854191bd181e56e012c", "key": "YLHEL8W1DV4VP084NLAK93DPX3O7GD71", "type": "put", "leader": "FFFF"} 
+[1608221829206][Host: 0003] Forwarding message to 0019 
+[1608221829207][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "UK845YUQMRNU2I5E", "value": "e1d62e76d53dc05d77b74f8b2e0fbb9b", "key": "S7IQD96SXFADENQ9EWK4U5329KTROYOY", "type": "put", "leader": "FFFF"} 
+[1608221829207][Host: 0003] Forwarding message to 001B 
+[1608221829207][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "29MKVNYB0RKRGYU9", "value": "34095c0bd0a3259cf09372cf35ab9257", "key": "X4LCDOPP5RKKM5S4CDKU5GGKQAIIF8AW", "type": "put", "leader": "FFFF"} 
+[1608221829207][Host: 0003] Forwarding message to 0018 
+[1608221829208][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "1S6D8C4J9FSHFBPK", "value": "155d11d1948c06d2828c41ab43410e3e", "key": "RZ1WI5AB5I0H9RQ3O7FQFWNTHV82FK25", "type": "put", "leader": "FFFF"} 
+[1608221829208][Host: 0003] Forwarding message to 0016 
+[1608221829208][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "I74Q2YJLAPHKD1ZC", "value": "5fd8f69b30fb019a95e16d76d8a6cd9f", "key": "I37QAQZGS04QCL0ZSQ38UAOB6Y18KHJF", "type": "put", "leader": "FFFF"} 
+[1608221829208][Host: 0003] Forwarding message to 0019 
+[1608221829209][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "IC56IPL6THU5X8IS", "value": "18db33c84920817ef8a3efb81244aad6", "key": "XMYM8GKROBM9VKNK2W9D0B7TX0FOT0IN", "type": "put", "leader": "FFFF"} 
+[1608221829209][Host: 0003] Forwarding message to 001A 
+[1608221829209][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "DERKN2D13TK76K5B", "value": "8336af9242fb7131d3f278e89ce52c72", "key": "VME29M52DKIEYBOUIBUSHA1J7IUNSWCQ", "type": "put", "leader": "FFFF"} 
+[1608221829209][Host: 0003] Forwarding message to 0016 
+[1608221829210][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "2Y93YKEAFMF48ZI6", "value": "0fab6ac9c675816b0b545de7c4909b00", "key": "CW6RS1EZM5YYVUAEBMUURALEL0TRAHH8", "type": "put", "leader": "FFFF"} 
+[1608221829210][Host: 0003] Forwarding message to 0017 
+[1608221829210][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "BOEHBMD9LOGBYPED", "value": "0f6f4706aca1eedcafb76384f14ec0ac", "key": "L28TFTA5R6VWYL3G55QV0O7SZPC4ASI0", "type": "put", "leader": "FFFF"} 
+[1608221829210][Host: 0003] Forwarding message to 001C 
+[1608221829211][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "LNY45UDJUGBQKJUJ", "value": "6f9b9d5151e5cf17efae7f165e0d21a8", "key": "5JG4GQNTDMTXZMEQNJISSPZ5SPPCIGEP", "type": "put", "leader": "FFFF"} 
+[1608221829211][Host: 0003] Forwarding message to 001B 
+[1608221829211][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "JHOFTBOCFNNSYC27", "value": "872cbe69efd5fc840341998ce8ad3714", "key": "QOFZFWLIQUBDPKON5TBDHLA92S2WP358", "type": "put", "leader": "FFFF"} 
+[1608221829211][Host: 0003] Forwarding message to 001A 
+[1608221829212][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "N1478ZHMEYIEKD0C", "value": "150da83e2d5bea18c6c57d7bb7fd2bf8", "key": "W74R7Q8Q3H1OH2CKJL21N9RQ5FEWS3OB", "type": "put", "leader": "FFFF"} 
+[1608221829212][Host: 0003] Forwarding message to 0019 
+[1608221829212][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "5Q7E5OUMG6Z4KEH4", "value": "4699d006cccde8cd871459ed4c879549", "key": "BKSF63JMAU00788ABMJWTJX6WEOLC15S", "type": "put", "leader": "FFFF"} 
+[1608221829213][Host: 0003] Forwarding message to 001A 
+[1608221829213][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "CVG8CYZPOQ54IVJM", "value": "7cea981cbf1680e03fe5ae400d2bb0a3", "key": "XPH9HR69GRGGEHXBWH7DO3XOFXIFCNOS", "type": "put", "leader": "FFFF"} 
+[1608221829213][Host: 0003] Forwarding message to 001A 
+[1608221829214][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "B1DKF7SS1E3EXP9C", "value": "a6a9f6243ef51ef2ff4cbce91d0fda91", "key": "AH6P1EZZ1QE20YO2BKLC0OP00AQD25C5", "type": "put", "leader": "FFFF"} 
+[1608221829214][Host: 0003] Forwarding message to 0017 
+[1608221829214][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "CCYNF8IKDSV7DHZL", "value": "ecc3352d0fa326ae38e28018db7882d1", "key": "R0V1Y2BC3ZJ5X0ES5TCZNSA3E91653HG", "type": "put", "leader": "FFFF"} 
+[1608221829214][Host: 0003] Forwarding message to 0018 
+[1608221829215][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "RAJB5XYDB7TE7IBQ", "value": "077b2e20ec351e18a142467468871f2a", "key": "NQYNZOJ3GY7Z1IQ215GEDKL3ONL1EVTJ", "type": "put", "leader": "FFFF"} 
+[1608221829215][Host: 0003] Forwarding message to 0019 
+[1608221829215][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "GQDGNE63C5JAF2C4", "value": "9690fdbc592a119edc421ba32895f5d2", "key": "27WYFZ9OIRDBVYXY7AFUFD3GG1N8IPOK", "type": "put", "leader": "FFFF"} 
+[1608221829215][Host: 0003] Forwarding message to 001A 
+[1608221829216][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "21DUDFQ8W3X8NAJU", "value": "d303f1d5717acf9eb5234c4135d2ce79", "key": "BTVVNCZBOIWZD11VHGD1IQ1GCFWI3SJL", "type": "put", "leader": "FFFF"} 
+[1608221829216][Host: 0003] Forwarding message to 0017 
+[1608221829216][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "25ONNVRL8DTMCVHQ", "value": "5aada8a5b97800a71bab505da863fb45", "key": "MN4P2E9SHBM42FL53AJH1QDP3EMX4CTE", "type": "put", "leader": "FFFF"} 
+[1608221829216][Host: 0003] Forwarding message to 001A 
+[1608221829217][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "4W2860JIANB6SANU", "value": "ad0a45961607a5dceec622506886daeb", "key": "F1MVUAYE84I318KMWPIBCDGF5U84R00T", "type": "put", "leader": "FFFF"} 
+[1608221829217][Host: 0003] Forwarding message to 001B 
+[1608221829217][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "Y0GKMLHYUGS1N77J", "value": "60365b630b317aa61309f7bd83b52584", "key": "J5U5ZQRP5SUMV30T2DAQGUMF7ZUK1EGB", "type": "put", "leader": "FFFF"} 
+[1608221829217][Host: 0003] Forwarding message to 001C 
+[1608221829218][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "QEW5DHKFXVYP79CC", "value": "1db6b3d3f1103bfd8a5406d9bb3acfe6", "key": "5TWOYHMY4HK45ISLZH57TSU2DD5AKEBD", "type": "put", "leader": "FFFF"} 
+[1608221829218][Host: 0003] Forwarding message to 0018 
+[1608221829218][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "GSZ4M7XLLGADKVU0", "value": "e7e99e1a26e1ac6bc04d120ac5fd34b5", "key": "J9EZ9UISQ9JC46TIKGHPOQFZJUOVBNAR", "type": "put", "leader": "FFFF"} 
+[1608221829218][Host: 0003] Forwarding message to 001B 
+[1608221829219][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "FBPWRH3ZZL4UXM7W", "value": "82bab9d52eb96510b0241175a7f5900e", "key": "9TIX84P80A2TAEN0MNEV7WELUEH1DMHU", "type": "put", "leader": "FFFF"} 
+[1608221829219][Host: 0003] Forwarding message to 001B 
+[1608221829219][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "8SWDA3UGTAZ63ADE", "value": "e2b73fc7ce68ed7a090246ca1cf1d73d", "key": "4FJ7AOYHWZV9W7I2COVCDSKURO629ZU9", "type": "put", "leader": "FFFF"} 
+[1608221829220][Host: 0003] Forwarding message to 001B 
+[1608221829220][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "3GARIN05ZOZN01HS", "value": "1ef6edafddd0813452d0d26fb14a9c2f", "key": "6HMCK11BSHK2O8XDGU39YCRQUG4Z0CTM", "type": "put", "leader": "FFFF"} 
+[1608221829220][Host: 0003] Forwarding message to 0017 
+[1608221829221][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "E5N3CBXW3NZ946HX", "value": "defa9fd130f3267322ff2e3a8a025f98", "key": "YQLQNE0AOSTOEVQUDGD2EV0GI0SFR15L", "type": "put", "leader": "FFFF"} 
+[1608221829221][Host: 0003] Forwarding message to 001C 
+[1608221829221][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "9CK4P5F771YJKFS1", "value": "bbbee9312c7fa7a92f1a0a05e57fd5b0", "key": "EZX43JTQDZX2KDRWKCWW8B7C6FA3XUXJ", "type": "put", "leader": "FFFF"} 
+[1608221829221][Host: 0003] Forwarding message to 0016 
+[1608221829222][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "E0Z10X8SE2QHF2PP", "value": "88c09e6f0e084b2fe7dadbeddf303f9c", "key": "6OPDCFRSX7V5OD98TE1Y3MLW8CG9F6XZ", "type": "put", "leader": "FFFF"} 
+[1608221829222][Host: 0003] Forwarding message to 0016 
+[1608221829222][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "M5INBGJV3OB3EBVF", "value": "9dbaed93e78c7d5dd89a44c418f2ae52", "key": "R9BOM5ULWW1XQV34WYBTU5HVHAG2GP3V", "type": "put", "leader": "FFFF"} 
+[1608221829222][Host: 0003] Forwarding message to 001C 
+[1608221829223][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "7QYQ9ZESXIAKTSL5", "value": "a139f3b624a15e59dd1507c6e497f49d", "key": "YKFPOIS5CUXWSZ8O4X73S22GM05EN5NH", "type": "put", "leader": "FFFF"} 
+[1608221829223][Host: 0003] Forwarding message to 001B 
+[1608221829223][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "9NN108HZM5LC3RZJ", "value": "88de3e799468a8b702a6f5782bb703f2", "key": "FNPOQR97QKPSLDCKOOJZFZVHHUQ7KUBH", "type": "put", "leader": "FFFF"} 
+[1608221829223][Host: 0003] Forwarding message to 0019 
+[1608221829224][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "2M5IRCQDDIDIYDJ4", "value": "11a2aab4a111d113ab5b346b6a647ed0", "key": "AO6XV32VUBILCGL6BMNELX177UPI9UL4", "type": "put", "leader": "FFFF"} 
+[1608221829224][Host: 0003] Forwarding message to 0018 
+[1608221829224][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "25SN3OO7VX2SDOTV", "value": "db226c77502143afbb7e009f694acfde", "key": "1PF3VY6BE57ADT8NHI1YDS5WIQGDA3OM", "type": "put", "leader": "FFFF"} 
+[1608221829224][Host: 0003] Forwarding message to 0016 
+[1608221829225][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "9KLW98AMPRIR08XQ", "value": "ba3b7c69899f5a1aef6f154e0742e32b", "key": "AKM5AN52HTHUHLZR8GQ682N4TTXG87GF", "type": "put", "leader": "FFFF"} 
+[1608221829225][Host: 0003] Forwarding message to 0015 
+[1608221829225][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "CCFBBZJHGKY6FRFV", "value": "76efcf532e9a18c83be65bc9c0b924c9", "key": "NMWNC1EB0D1OZPL3HAQLZ956NTBH9W7Z", "type": "put", "leader": "FFFF"} 
+[1608221829225][Host: 0003] Forwarding message to 0016 
+[1608221829226][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "A40F0JNMBFWHLNLY", "value": "50389166db2f5766778b9825c986c067", "key": "VN39P7X6ZVZNPQAFEV6UG8LNED9OZHDX", "type": "put", "leader": "FFFF"} 
+[1608221829226][Host: 0003] Forwarding message to 0016 
+[1608221829226][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "RSC6PEECA1IK6FPN", "value": "9f5c213e38a12106d0c3e0fe4cbbba1a", "key": "4A9EC14QF81UCDS27FNF9O7HE6BN0RVG", "type": "put", "leader": "FFFF"} 
+[1608221829226][Host: 0003] Forwarding message to 0015 
+[1608221829227][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "2TM9YV885Y0SHHAE", "value": "fadd6d0f2e52528b90b8ae97db18f3c4", "key": "3XV4AP48E8R54U1TYEX81TKS3FBBR3AL", "type": "put", "leader": "FFFF"} 
+[1608221829227][Host: 0003] Forwarding message to 001B 
+[1608221829228][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "BD6F38X8AFUEN101", "value": "0d8459e1b20f6c30ea1f88487a9aa71f", "key": "ME106BBKNIUF071SSX41P544ZNNWAW9Z", "type": "put", "leader": "FFFF"} 
+[1608221829228][Host: 0003] Forwarding message to 0018 
+[1608221829229][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "EPXP6JHOQ3NPT9N5", "value": "5f67fbed591f58c24e2a362412fb5e94", "key": "E75ZCH25200EBTCBU0FXF8R15IXJTJ0F", "type": "put", "leader": "FFFF"} 
+[1608221829230][Host: 0003] Forwarding message to 0016 
+[1608221829231][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "8IICJQTDN3ALMC9I", "value": "339c5380d0208ef472abea0ec23f2232", "key": "S5IWLG99GZ8YCCMP6OL6AAGZFBSOH7VE", "type": "put", "leader": "FFFF"} 
+[1608221829231][Host: 0003] Forwarding message to 0019 
+[1608221829232][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "N7G56Q52RGVNUBRU", "value": "2500d01fa09c140242e933352102d864", "key": "R6Q8E26O5Z4MPF3GTNI6629SA7WC5XTP", "type": "put", "leader": "FFFF"} 
+[1608221829232][Host: 0003] Forwarding message to 0016 
+[1608221829233][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "NQEOY26KD7IDZYT7", "value": "8fa4dead64e925e5eec160f343ed9caf", "key": "V3ZWLZBOX687YV1FH6BWUBR4F495RWL0", "type": "put", "leader": "FFFF"} 
+[1608221829233][Host: 0003] Forwarding message to 0017 
+[1608221829234][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "ZYJP9KAUQI8QXGI1", "value": "6436368a92b0184017c33e43bb61261a", "key": "3CV7TFAJID21WT2136O8SO2NBR9YMGV6", "type": "put", "leader": "FFFF"} 
+[1608221829234][Host: 0003] Forwarding message to 0015 
+[1608221829235][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "PX9FJIK2Z6SSUOE3", "value": "0eedfb51c32d30ba604219a6bab90d25", "key": "I2I48K18GU58LW4JDTJV7FX9XK28NXTW", "type": "put", "leader": "FFFF"} 
+[1608221829235][Host: 0003] Forwarding message to 0015 
+[1608221829236][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "YGF4RXY9GBOFYYY7", "value": "31183a4b371b7591558f40969905f349", "key": "6XE7QRQ2DVP3QQ4C4VXICPT1B1NWSCOH", "type": "put", "leader": "FFFF"} 
+[1608221829236][Host: 0003] Forwarding message to 001B 
+[1608221829237][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "KIR7962LF81PMS5S", "value": "7ec692b7095072f80e01f975e80cad92", "key": "YXW1DQLMIZV0Q91HUK2XWBEDL2165OYN", "type": "put", "leader": "FFFF"} 
+[1608221829237][Host: 0003] Forwarding message to 0017 
+[1608221829238][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "KJKLOA1VGDH880YE", "value": "d6a90d4a6dd55d22daa96bd9b3cf5c66", "key": "C14K78LKNUIAQYK2Q8NKCEQ1UO1N186L", "type": "put", "leader": "FFFF"} 
+[1608221829238][Host: 0003] Forwarding message to 0018 
+[1608221829239][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "427BGOOV6SR95VM4", "value": "2a42c38a8c652962874f4ba491746aa9", "key": "SYRJG039B9QX095NX2IT7O9MWXJW9GS3", "type": "put", "leader": "FFFF"} 
+[1608221829239][Host: 0003] Forwarding message to 0019 
+[1608221829240][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "6T9YEGRQLBJ04D1T", "value": "f8840dc4bc0f689c95db23be635d5b41", "key": "F1EETUJEDQGQSP89J96MLJ42GAVTV3P3", "type": "put", "leader": "FFFF"} 
+[1608221829240][Host: 0003] Forwarding message to 001B 
+[1608221829241][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "IR6KBJWBI4ZR5I2B", "value": "611bdad95780a13fd7eab15f34ca605b", "key": "OOBPSOM5XJHFNVZMVXEWVWMH05WIVFW3", "type": "put", "leader": "FFFF"} 
+[1608221829241][Host: 0003] Forwarding message to 0019 
+[1608221829242][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "0BGI3ZRNUR3YYL6C", "value": "12487f9490efebb15fe0f51fd04a65ba", "key": "SF2KSV10BOOTGGUQPLLM4MYRZAAJIVZI", "type": "put", "leader": "FFFF"} 
+[1608221829242][Host: 0003] Forwarding message to 001B 
+[1608221829243][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "NLX4FKUMY79HEAVH", "value": "5d75164f14a901c41cbe2a49c07ad181", "key": "Z0MGUGB3354PIAYGC9PL99XAKMS598DR", "type": "put", "leader": "FFFF"} 
+[1608221829243][Host: 0003] Forwarding message to 0015 
+[1608221829243][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "BM82NQ8VZIXI8JES", "value": "1fdbba86ede9c4d1fd5d3d948f6363d5", "key": "OXQNT8AWGVKV38YOBPRF1NXV6ATVGFN7", "type": "put", "leader": "FFFF"} 
+[1608221829244][Host: 0003] Forwarding message to 0018 
+[1608221829244][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "KBI1AFY88BJ7REYM", "value": "926637fcf854f648d038d8695cdfd587", "key": "OXYSF5KSV1V7XF1YTE3KGRWJEW5KTOO8", "type": "put", "leader": "FFFF"} 
+[1608221829244][Host: 0003] Forwarding message to 0015 
+[1608221829245][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "K1LOM3DYWE6KAVLV", "value": "53eb6ce096f68ff16cd09ee3414ffcb2", "key": "EE23C87ITG7A6Z2V7JHBBI1RT3MFJ0K3", "type": "put", "leader": "FFFF"} 
+[1608221829245][Host: 0003] Forwarding message to 0016 
+[1608221829246][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "3FEJNHS3U69QWP1D", "value": "af211344d86a07b3f7177af8b11d8996", "key": "4JXE5BM889T4BDVUKQSE70MT4O6HMD6K", "type": "put", "leader": "FFFF"} 
+[1608221829246][Host: 0003] Forwarding message to 001A 
+[1608221829247][Host: 0003] Became a Candidate 
+[1608221829248][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "IQJA8DSK6ISTDH2V", "value": "8681366dda1d1b836f5089802113c1c6", "key": "9AJ8HRZJB69BF1G2KA5P3HS2R3UYPWA5", "type": "put", "leader": "FFFF"} 
+[1608221829249][Host: 0003] Forwarding message to 0018 
+[1608221829250][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "O5X62VXLB4YFE4JS", "value": "72dadcf22295586582713f4a93926b32", "key": "U23BSKOMJYFM42L4K0SFX87KMSYKTSOO", "type": "put", "leader": "FFFF"} 
+[1608221829250][Host: 0003] Forwarding message to 0016 
+[1608221829251][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "O4ZCV9JVKOZATFXD", "value": "3cd981c9c56363b1bb83f6cd17b3e0b4", "key": "HWLJSXKSSQTPUKXZOB31JA7N13Z2643R", "type": "put", "leader": "FFFF"} 
+[1608221829251][Host: 0003] Forwarding message to 0016 
+[1608221829252][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "BF7CP8UB6GUO94ZT", "value": "4c47c036f6fb6551246a712c164803ad", "key": "S0ED63FMIQ52PIWD42OWUAW5NNSYNOL6", "type": "put", "leader": "FFFF"} 
+[1608221829252][Host: 0003] Forwarding message to 0019 
+[1608221829253][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "UEJBMVMBSZBQATGD", "value": "1527330562bb67c9001fa866671e6ed1", "key": "BO964UUHM9RLV95T45IFWIBFOBGKCT92", "type": "put", "leader": "FFFF"} 
+[1608221829253][Host: 0003] Forwarding message to 0019 
+[1608221829254][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "7V0BSKF1NFCQF94I", "value": "83c71384e10e5d55dc33a7b31437dc44", "key": "NNOGPKY23EPQXMKPPQJKQ222DN8CET4A", "type": "put", "leader": "FFFF"} 
+[1608221829254][Host: 0003] Forwarding message to 001A 
+[1608221829255][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "P7ODNY2NYSOXJYEX", "value": "0f2790c125496230380a0208e815e11c", "key": "INX3RSUSCF381EI6BUX2GJWVRJF2GRFP", "type": "put", "leader": "FFFF"} 
+[1608221829255][Host: 0003] Forwarding message to 0019 
+[1608221829255][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "VNZNUPYPQH1J34OK", "value": "d76b550aeb9c2d8d8645493991ca8049", "key": "TC7JBFDM6GYKTD6NI3PLXTTP5AL6QWEC", "type": "put", "leader": "FFFF"} 
+[1608221829255][Host: 0003] Forwarding message to 0017 
+[1608221829256][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "1AS0NUCMX5ZJ2XNP", "value": "130f8b05ee358517a5b97d5b26f814c5", "key": "RM8CSJLILW1JT69DZH6S2IM5DNUYAA5M", "type": "put", "leader": "FFFF"} 
+[1608221829256][Host: 0003] Forwarding message to 001B 
+[1608221829257][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "VURCDE94M8GKBYSQ", "value": "d57b3ef7e183f04c02c8e7da0b338ec2", "key": "IJ5717F306LC1A8U72Z2L5O9VZ7RXRGE", "type": "put", "leader": "FFFF"} 
+[1608221829257][Host: 0003] Forwarding message to 0015 
+[1608221829258][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "EKGG69PZONDEFGYO", "value": "098b08e2b7025ea9c6322644f1ee1657", "key": "8L4Q04YTCZDNQ9EGYJ8Z1NDWBHSHM6NK", "type": "put", "leader": "FFFF"} 
+[1608221829258][Host: 0003] Forwarding message to 001A 
+[1608221829259][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "I6WUZPGT6QQ2K6IO", "value": "0067def78ef5585c30652c347683ef52", "key": "VQQ0S0S904HVXKHGQAUO0OHLDYAX7UN7", "type": "put", "leader": "FFFF"} 
+[1608221829259][Host: 0003] Forwarding message to 001C 
+[1608221829260][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "KK5GUDRXXCCHBXM4", "value": "addb7b8c1736f9b48faabfc26e4671b0", "key": "WIYVS9T95MXHP3REHYD8NV7LVC8RBMZD", "type": "put", "leader": "FFFF"} 
+[1608221829260][Host: 0003] Forwarding message to 0018 
+[1608221829261][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "B8AVD2736KAL5C26", "value": "b37b85ebe5bd6833244174f07412a545", "key": "6BAL3UFFGEZPM8ME6WX8QOUNYUMM01BK", "type": "put", "leader": "FFFF"} 
+[1608221829261][Host: 0003] Forwarding message to 0019 
+[1608221829261][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "WUFRDV3ARRBK2H9F", "value": "7735af114c2f049093a6ebb4d1f94bb6", "key": "I5VB1V7QKCHFEI6L5EXAIYRTLTSVPZEP", "type": "put", "leader": "FFFF"} 
+[1608221829261][Host: 0003] Forwarding message to 001C 
+[1608221829262][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "XR3JHLQREPQ81FUR", "value": "1ef8e125018b75cec5bddeac507a0d52", "key": "WJ6LURRK4EXM82QQYQJWLDTJW3IRDTX3", "type": "put", "leader": "FFFF"} 
+[1608221829262][Host: 0003] Forwarding message to 001A 
+[1608221829263][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "9IZNLEB1OKNI6B47", "value": "016d6bf74554f6a9678fd11441f2387d", "key": "TWCZOS0ABXUJ27WMW2N9G0PX6NL8AK1M", "type": "put", "leader": "FFFF"} 
+[1608221829263][Host: 0003] Forwarding message to 0017 
+[1608221829264][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "9CNALJVKR4XD56ZJ", "value": "aca45069a7d136b268f1ce4d46aa772b", "key": "4ONJJ51GDA2IZ1J5T9764AM98RQO156V", "type": "put", "leader": "FFFF"} 
+[1608221829264][Host: 0003] Forwarding message to 001B 
+[1608221829265][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "CDWMSJWWK1AJE1X7", "value": "36ed433b05f93ad984f41d0fa5c47228", "key": "JMEHM7N4EV1MXBQPOB1C5X27M4J64HAP", "type": "put", "leader": "FFFF"} 
+[1608221829265][Host: 0003] Forwarding message to 0019 
+[1608221829266][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "BP90DVM6Q2RTWZYM", "value": "7ca09b409a705c8e38664efa7dd4c474", "key": "62L9JX2D8P5V5C3VCADYMBZICPEAQ4J6", "type": "put", "leader": "FFFF"} 
+[1608221829266][Host: 0003] Forwarding message to 0019 
+[1608221829266][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 2, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829267][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 2, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829268][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 3, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829269][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 3, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829270][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 4, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829271][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 4, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829271][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 5, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829272][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 5, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829273][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 6, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829274][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 6, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829275][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 7, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829275][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 7, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829276][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 8, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829277][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 8, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829278][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 9, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829279][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 9, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829280][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 10, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829280][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 10, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829281][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 11, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829282][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 11, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829283][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 12, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829284][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 12, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829285][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 13, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829286][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 13, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829286][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 14, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829287][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 14, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829288][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 15, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829289][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 15, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829290][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 16, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829290][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 16, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829291][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 17, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829292][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 17, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829293][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 18, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829294][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 18, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829295][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 19, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829295][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 19, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829296][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 20, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829297][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 20, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829298][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 21, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829299][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 21, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829299][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 22, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829300][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 22, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829301][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 23, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829302][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 23, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829303][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 24, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829304][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 24, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829305][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 25, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829306][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 25, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829307][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 26, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829308][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 26, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829309][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 27, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829310][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 27, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829313][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 28, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829313][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 28, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829314][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 29, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829314][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 29, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829315][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 30, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829315][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 30, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829316][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 31, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829316][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 31, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829317][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 32, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829317][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 32, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829318][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 33, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829318][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 33, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829318][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 34, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829319][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 34, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829319][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 35, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829320][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 35, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829320][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 36, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829320][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 36, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829321][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 37, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829321][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 37, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829322][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 38, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829322][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 38, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829323][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 39, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829324][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 39, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829325][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 40, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829326][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 40, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829327][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 41, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829328][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 41, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829328][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 42, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829329][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 42, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829330][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 43, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829331][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 43, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829332][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 44, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829333][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 44, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829334][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 45, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829335][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 45, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829336][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 46, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829337][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 46, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829338][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 47, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829339][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 47, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829339][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 48, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829340][Host: 0003] Became a Candidate 
+[1608221829340][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 48, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829341][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 49, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829342][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 49, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829342][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 50, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829343][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 50, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829343][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 51, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829344][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 51, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829344][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 52, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829344][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 52, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829345][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 53, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829345][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 53, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829346][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 54, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829346][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 54, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829346][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 55, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829347][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 55, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829347][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 56, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829347][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 56, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829348][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 57, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829348][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 57, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829349][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 58, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829349][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 58, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829349][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 59, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829350][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 59, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829350][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 60, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829350][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 60, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829351][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 61, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829351][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 61, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829352][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 62, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829352][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 62, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829352][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 63, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829353][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 63, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829353][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 64, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829354][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 64, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829354][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 65, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829355][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 65, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829355][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 66, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829355][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 66, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829356][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 67, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829356][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 67, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829357][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 68, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829357][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 68, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829357][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 69, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829358][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 69, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829358][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 70, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829359][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 70, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829359][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "QUUPHAE9JZK2H34E", "value": "575524935534be385e01d13d6b79ebc8", "key": "95FZ1SMAQNR1R6RTZ3YQRVEF1XOCIL9C", "type": "put", "leader": "FFFF"} 
+[1608221829359][Host: 0003] Forwarding message to 001C 
+[1608221829359][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "656TA8AZEL5VCRZY", "value": "1c10dea196f03d866d0a321cee53630c", "key": "1KPGZDMNDOM0YHU6WGBR4H8PXCU9VY57", "type": "put", "leader": "FFFF"} 
+[1608221829359][Host: 0003] Forwarding message to 001C 
+[1608221829360][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "6S6XJXVPY9ACAS5H", "value": "7ec692b7095072f80e01f975e80cad92", "key": "YXW1DQLMIZV0Q91HUK2XWBEDL2165OYN", "type": "put", "leader": "FFFF"} 
+[1608221829360][Host: 0003] Forwarding message to 0017 
+[1608221829360][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "DMRQCO7741MJ9G4Y", "value": "542272541badc4c56a131613ffd32454", "key": "UZJ1K3NY011HJ347C0A9P743ZQRFXCA1", "type": "put", "leader": "FFFF"} 
+[1608221829360][Host: 0003] Forwarding message to 0016 
+[1608221829361][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "UOC7X7LDX0ZXTL6J", "value": "97d675a228275ed368af738237d64959", "key": "JK64PFNK1XEN87N7POGP3UKSXOL85L63", "type": "put", "leader": "FFFF"} 
+[1608221829361][Host: 0003] Forwarding message to 001A 
+[1608221829361][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "2BUURV9G2NCILAHR", "value": "d6a90d4a6dd55d22daa96bd9b3cf5c66", "key": "C14K78LKNUIAQYK2Q8NKCEQ1UO1N186L", "type": "put", "leader": "FFFF"} 
+[1608221829361][Host: 0003] Forwarding message to 0018 
+[1608221829362][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "GJHT8S5GLGXRU2EN", "value": "2ee00d473441fbf931fc3fa730246f1f", "key": "8D0LDG08JND2HHBCYCK7Q4L6B5299XK6", "type": "put", "leader": "FFFF"} 
+[1608221829362][Host: 0003] Forwarding message to 0018 
+[1608221829362][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "D2HDHX68B5EJDHO3", "value": "e62fee70ecd134e4779676d60423b2a3", "key": "DCVS8R9MVYNELTA3PPEEGM52VXVF0UEN", "type": "put", "leader": "FFFF"} 
+[1608221829362][Host: 0003] Forwarding message to 0016 
+[1608221829363][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "7S82LVHD7ONZV4BI", "value": "3b3aa5461e30bdcb9e44162d0263f041", "key": "AQ7XXYQ4EC46FQ5EJHB4CPMDCIY8SACM", "type": "put", "leader": "FFFF"} 
+[1608221829363][Host: 0003] Forwarding message to 0015 
+[1608221829364][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "B92T2XAJRI6SI4TA", "value": "611bdad95780a13fd7eab15f34ca605b", "key": "OOBPSOM5XJHFNVZMVXEWVWMH05WIVFW3", "type": "put", "leader": "FFFF"} 
+[1608221829364][Host: 0003] Forwarding message to 0019 
+[1608221829364][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "DWR9VWJ3WV66QME1", "value": "b6a2fa5b8dba9f5d67f8e107b260ded2", "key": "MN29XCG8EYSDS4IA0M4UZGS4U61FIHYE", "type": "put", "leader": "FFFF"} 
+[1608221829364][Host: 0003] Forwarding message to 0016 
+[1608221829365][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "I9AST361GG4ZGRY6", "value": "12487f9490efebb15fe0f51fd04a65ba", "key": "SF2KSV10BOOTGGUQPLLM4MYRZAAJIVZI", "type": "put", "leader": "FFFF"} 
+[1608221829365][Host: 0003] Forwarding message to 001B 
+[1608221829366][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "K34PJRWTZ8B60N9Y", "value": "5d75164f14a901c41cbe2a49c07ad181", "key": "Z0MGUGB3354PIAYGC9PL99XAKMS598DR", "type": "put", "leader": "FFFF"} 
+[1608221829366][Host: 0003] Forwarding message to 0015 
+[1608221829366][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "V3ZTRTWW32UIFGO3", "value": "1fdbba86ede9c4d1fd5d3d948f6363d5", "key": "OXQNT8AWGVKV38YOBPRF1NXV6ATVGFN7", "type": "put", "leader": "FFFF"} 
+[1608221829366][Host: 0003] Forwarding message to 0018 
+[1608221829367][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "6ITAJ1M51T2IY6XZ", "value": "589c84d2857610ab1a19a9f9c54dfc8d", "key": "95X4VWHNWBKLJDZOK6UXDG0NF8POLM0A", "type": "put", "leader": "FFFF"} 
+[1608221829367][Host: 0003] Forwarding message to 001A 
+[1608221829368][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "SSZJELKYSPL1I7WK", "value": "94ab84f0f5b82dad079db2964697a6fc", "key": "7RJKJXIXSH4KSUG20CFFYPIOGOQBC3XT", "type": "put", "leader": "FFFF"} 
+[1608221829368][Host: 0003] Forwarding message to 0017 
+[1608221829368][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "OXXY8LE9HSLKV7OC", "value": "2e3c4bd8e1cfc9651492acdb47aac7da", "key": "P1AK1QAATCSO7VWIR7LYQI2ACCGJURP5", "type": "put", "leader": "FFFF"} 
+[1608221829368][Host: 0003] Forwarding message to 001C 
+[1608221829369][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "Z5ZADYODUD07Q02U", "value": "33c7bef5805649acf8a5cce1052c8970", "key": "DZ0W0IMEKVC3GGENULQY0290PJAKOUI5", "type": "put", "leader": "FFFF"} 
+[1608221829369][Host: 0003] Forwarding message to 0015 
+[1608221829370][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "leader": "FFFF", "term": 147, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829370][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "S1QE1LY9JR8SRCXT", "value": "004551cc1a9e4010cb2c6ffa50f9507e", "key": "D6YPS3FYYTU3NYTS93IM7JMOT5YCY15N", "type": "put", "leader": "FFFF"} 
+[1608221829370][Host: 0003] Forwarding message to 001C 
+[1608221829371][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "BYCQCBC366OIJIYU", "value": "d204258717245f94f50c565d1fa6708c", "key": "TKX0E5CLPNBMU2XCM4FVEOYIUMV3OGMS", "type": "put", "leader": "FFFF"} 
+[1608221829371][Host: 0003] Forwarding message to 0016 
+[1608221829371][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "5R0LUNDGWZQZCMIT", "value": "46a54eec99d98960506a9649288538be", "key": "CS7FZ19NQXYZZRE4P8H8GZUKSIC8VKT4", "type": "put", "leader": "FFFF"} 
+[1608221829371][Host: 0003] Forwarding message to 0017 
+[1608221829372][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "RPOL5OOOJYYMMCQY", "value": "7ad35120f266e6ef9d5291dae0eac390", "key": "4DPZHPOTOY75ODOMC7YGDG3C6GR3F9QM", "type": "put", "leader": "FFFF"} 
+[1608221829372][Host: 0003] Forwarding message to 001A 
+[1608221829373][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "3ZJ3NKBIM4O8E4EF", "value": "d76b550aeb9c2d8d8645493991ca8049", "key": "TC7JBFDM6GYKTD6NI3PLXTTP5AL6QWEC", "type": "put", "leader": "FFFF"} 
+[1608221829373][Host: 0003] Forwarding message to 0017 
+[1608221829373][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "5KKG55U9YNXRE5JS", "value": "b64491a720229a103284584823811242", "key": "AH3USSOTRD8UW49YBW0MXFUFIMUTM70L", "type": "put", "leader": "FFFF"} 
+[1608221829373][Host: 0003] Forwarding message to 001A 
+[1608221829374][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "X3OFZUOQZH58W8ZV", "value": "130f8b05ee358517a5b97d5b26f814c5", "key": "RM8CSJLILW1JT69DZH6S2IM5DNUYAA5M", "type": "put", "leader": "FFFF"} 
+[1608221829374][Host: 0003] Forwarding message to 001B 
+[1608221829375][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "NXJS5KW936PVFIV0", "value": "7c4407cd545af2e212131f400ce17b81", "key": "T8QN2A5JQSOZXZM3L6Z1VU0ZQHQFCBX2", "type": "put", "leader": "FFFF"} 
+[1608221829375][Host: 0003] Forwarding message to 0017 
+[1608221829376][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "VXZFGCZ9TIQPYODS", "value": "8b72e7e00ca7508099f6df8ccdb0e6b6", "key": "ONBPAZFLRC9K1X5AH9TNDSPQNO23RQE5", "type": "put", "leader": "FFFF"} 
+[1608221829376][Host: 0003] Forwarding message to 0019 
+[1608221829376][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "3OSCBS9LNOB3VFCS", "value": "48898b11a8711e4048bcad6942b6c2fd", "key": "62OJBXEFQ1CTHG7PPABI4P0DS7DIEXGS", "type": "put", "leader": "FFFF"} 
+[1608221829377][Host: 0003] Forwarding message to 0015 
+[1608221829377][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "9WOK1NM1PMKE96VK", "value": "fad148cc6b5d25f6d28f4911381addd7", "key": "PTLKJAKQL0Z0ACXLF96MT091VTUL06T7", "type": "put", "leader": "FFFF"} 
+[1608221829377][Host: 0003] Forwarding message to 0015 
+[1608221829378][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "YAI7ZTE64O88J1AW", "value": "0067def78ef5585c30652c347683ef52", "key": "VQQ0S0S904HVXKHGQAUO0OHLDYAX7UN7", "type": "put", "leader": "FFFF"} 
+[1608221829378][Host: 0003] Forwarding message to 001C 
+[1608221829379][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "6089C8KTIVCVD37B", "value": "1e96aec2d81c1f2828b6702e93cfb6ef", "key": "WLY5V8R1FXW3MNZYWACUK4X5F9Z9JR8B", "type": "put", "leader": "FFFF"} 
+[1608221829380][Host: 0003] Forwarding message to 0017 
+[1608221829380][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "MU6Z3X7H0R7WD55D", "value": "addb7b8c1736f9b48faabfc26e4671b0", "key": "WIYVS9T95MXHP3REHYD8NV7LVC8RBMZD", "type": "put", "leader": "FFFF"} 
+[1608221829380][Host: 0003] Forwarding message to 0018 
+[1608221829381][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "BWDUC3B7N05UDIKY", "value": "681c274689ee10eaf655e5ca09e9c726", "key": "REV8DB0VQ0FH10PFYHAGE869FSF4AC9D", "type": "put", "leader": "FFFF"} 
+[1608221829381][Host: 0003] Forwarding message to 0016 
+[1608221829382][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "FM6ONF2NYGJ3SQGN", "value": "b37b85ebe5bd6833244174f07412a545", "key": "6BAL3UFFGEZPM8ME6WX8QOUNYUMM01BK", "type": "put", "leader": "FFFF"} 
+[1608221829382][Host: 0003] Forwarding message to 0019 
+[1608221829383][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "VXFGP1V38AXKITO9", "value": "7735af114c2f049093a6ebb4d1f94bb6", "key": "I5VB1V7QKCHFEI6L5EXAIYRTLTSVPZEP", "type": "put", "leader": "FFFF"} 
+[1608221829383][Host: 0003] Forwarding message to 001C 
+[1608221829384][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "7LFPQ9TQQ40G8INT", "value": "5dae7714a8949bee03ff1a7c3ee9de1b", "key": "XQ6WFMJQ1KHSFS1LA7T2TY0EB6LFNAIP", "type": "put", "leader": "FFFF"} 
+[1608221829384][Host: 0003] Forwarding message to 0017 
+[1608221829384][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "YQDS2IJDLRRT6Q7T", "value": "016d6bf74554f6a9678fd11441f2387d", "key": "TWCZOS0ABXUJ27WMW2N9G0PX6NL8AK1M", "type": "put", "leader": "FFFF"} 
+[1608221829384][Host: 0003] Forwarding message to 0017 
+[1608221829385][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "C6WM68QZ5G5MOR3S", "value": "4a05e27b4fadb75ffed5ede28164760c", "key": "6OI12MK5CHFUNO5UL746NWTBMMPDB7D5", "type": "put", "leader": "FFFF"} 
+[1608221829385][Host: 0003] Forwarding message to 0015 
+[1608221829386][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "6C86ELWFWNH5H56A", "value": "6379edded37adba2192bae4c1389db7b", "key": "782WKG7TZZTXQTP7VWN10HPMMPF873TJ", "type": "put", "leader": "FFFF"} 
+[1608221829386][Host: 0003] Forwarding message to 0016 
+[1608221829386][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "1IRIJKZE4AH33R8K", "value": "2940d2b23f574a8eb556f431f8c5024d", "key": "B2DKLEWZE5VPH8IJMZIOGJVT7F05MQ3T", "type": "put", "leader": "FFFF"} 
+[1608221829386][Host: 0003] Forwarding message to 0018 
+[1608221829387][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "S0AF7RAFPGRM5C5M", "value": "fa3a251df70dea5b3165d893c5738b27", "key": "QIRH3Y4D97H0CVO7X9C9UCQ4LQSYTWPS", "type": "put", "leader": "FFFF"} 
+[1608221829387][Host: 0003] Forwarding message to 001B 
+[1608221829388][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "HDIML900OB1VFK2B", "value": "ea2f6f15b886b3a8287026f99e897fb4", "key": "NLWC98IYSMHBRMXJ3Q11WMLB5GG3Q5NE", "type": "put", "leader": "FFFF"} 
+[1608221829388][Host: 0003] Forwarding message to 0015 
+[1608221829389][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "ZU7AKBMYNCFJ0CWU", "value": "ea2a74b4055c59ddea8e0c699ce9334b", "key": "1REQU1CUFX82P7EXFPHJAZZ9H9HGP3G1", "type": "put", "leader": "FFFF"} 
+[1608221829389][Host: 0003] Forwarding message to 0015 
+[1608221829389][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "9A9NGJ2IMJJWZ2VY", "value": "e3fd08ff7a01c1093b9036ae2c137639", "key": "M6VL1KAG4VGRKU1ANXU5UKD0Y2RZA4BA", "type": "put", "leader": "FFFF"} 
+[1608221829390][Host: 0003] Forwarding message to 0017 
+[1608221829391][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "2IXV1TGRT168JX44", "value": "05ed459fbe7feb920d7167acb8026937", "key": "IGYI6ZUX1BQKLZO57TIPHBM7AD6QAA5S", "type": "put", "leader": "FFFF"} 
+[1608221829391][Host: 0003] Forwarding message to 001C 
+[1608221829392][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "R4NLSWJHJXS8873Q", "value": "3fdb4fbba8a33f78654a2b2d1197ab70", "key": "IUU4GGCL6QS3LNCNPWB9ZRHQETIIC6LV", "type": "put", "leader": "FFFF"} 
+[1608221829392][Host: 0003] Forwarding message to 001A 
+[1608221829393][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "E4D3FDZ1BMPDXKF8", "value": "e0d7f9b790cd5d35ee703abfc4ef79d3", "key": "NSWG19Q6HYDRTTD6TJZFMLJ8LYW13U9I", "type": "put", "leader": "FFFF"} 
+[1608221829393][Host: 0003] Forwarding message to 0019 
+[1608221829394][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "FLABYT5SWCM1Z8CB", "value": "c358ffe9a45140d0302e9a9efe0688d6", "key": "SY6JAI0X2UU7WX50UWR5GVCIWMGD141J", "type": "put", "leader": "FFFF"} 
+[1608221829394][Host: 0003] Forwarding message to 001C 
+[1608221829395][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "C79PDATOF8LN7FOO", "value": "25b2c13b3f1cb6c9625c8a08c1a1078f", "key": "Q2EZJP8YVKLP7GB6J1LNSG7PBDRY4UQ2", "type": "put", "leader": "FFFF"} 
+[1608221829395][Host: 0003] Forwarding message to 0019 
+[1608221829396][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "PONAKXUNABMOTA4I", "value": "717c42672add069fc2cf3ba3510a906e", "key": "5QOWEFQQBNX72E1USUJ7PLDVJW4T4SKC", "type": "put", "leader": "FFFF"} 
+[1608221829396][Host: 0003] Forwarding message to 0017 
+[1608221829397][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "VRQRLR2JSIP1WMHM", "value": "62d418e35cf1c919c75e897b2dc744f2", "key": "MLY42IETFM14QJTCW45ZMAFZY2EFM4XM", "type": "put", "leader": "FFFF"} 
+[1608221829397][Host: 0003] Forwarding message to 0015 
+[1608221829398][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "AOW7LY8VPMHKSV3T", "value": "cf667a4657b0028d70592a46532ed6a6", "key": "W65KL66Q8C5CH8XLZUTC6SSW4IV0R3AW", "type": "put", "leader": "FFFF"} 
+[1608221829398][Host: 0003] Forwarding message to 0015 
+[1608221829399][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "0J8DA1XUF05SX2UA", "value": "3b6149fbda5bb69eed5bae5ea11898ce", "key": "9MZA7ZOLFYJZ0N6OH52SCIGMYL3KTA58", "type": "put", "leader": "FFFF"} 
+[1608221829399][Host: 0003] Forwarding message to 0017 
+[1608221829400][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "651LIQ9TNZ2ESBX8", "value": "b88b2fab2b14a1e7ba1c8c33f408c051", "key": "948FI72339FOI5V96JI51JX0R52LC968", "type": "put", "leader": "FFFF"} 
+[1608221829400][Host: 0003] Forwarding message to 001C 
+[1608221829401][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829401][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829401][Host: 0003] Became a leader 
+[1608221829405][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "0OVQLUES2MLBP28D", "value": "4c990b5e481279caaead294d91594062", "key": "TKLCU37LX4N0U9Z08T4VSMGPQABQI2WD", "type": "put", "leader": "FFFF"} 
+[1608221829406][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829407][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829407][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "5YJRNHYU5P7SBIIO", "value": "11c500c7ceec5b21046ab0e21a5fba87", "key": "X8IYV9SX0DAGC8MTKX3X15FPGFAJZEMU", "type": "put", "leader": "FFFF"} 
+[1608221829408][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829408][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829409][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829410][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829411][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829411][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "8RRAWI9S6T52S51V", "value": "7ee7ee7e8144f3c54268aa400d998736", "key": "9NUWXRGHSPHTRM7J133ERA1LGYMNPLUA", "type": "put", "leader": "FFFF"} 
+[1608221829412][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829413][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829413][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829414][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829415][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829415][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829416][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "XP70SM8CQKX5NJVJ", "value": "a17d53979a486d5c830026191f2c4d00", "key": "3UTFPF6RJXLAN2K0XR69ERJGY8OBWYWH", "type": "put", "leader": "FFFF"} 
+[1608221829417][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829417][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829418][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829418][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829419][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829420][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829420][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829421][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829422][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 150, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829422][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829423][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "leader": "FFFF", "term": 151, "type": "rv", "lastLogIndex": -1, "lastLogTerm": null} 
+[1608221829424][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829424][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829425][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829427][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829428][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829428][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829429][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829430][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829430][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "CUYKHMMXWQSRCIKI", "value": "292a97b7af04de23cf03aff0c6c89947", "key": "E3F9I5CQOVF4KH0JELUUL4O2ZQYXO6II", "type": "put", "leader": "FFFF"} 
+[1608221829431][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829432][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829432][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829433][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829434][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829435][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829435][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829436][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829437][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829437][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829438][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829438][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829439][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829440][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829440][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829441][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829442][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829442][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829443][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829443][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829444][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829445][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829445][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829447][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829449][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "9SVE3QO4B5I6AQXP", "value": "17fed906c97e6a9666dd087a6b379fbf", "key": "F0K2F8ATNSHGB6K2I0MOJC2OZ0GEC2YU", "type": "put", "leader": "FFFF"} 
+[1608221829450][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829451][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829452][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829452][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829453][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829454][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829454][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829455][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829456][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829456][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829457][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829458][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829458][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829459][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829460][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829460][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829461][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829461][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829462][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829463][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829463][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829464][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829464][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829465][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829465][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829465][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829465][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829466][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829466][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829466][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829467][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829467][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829467][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829467][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829468][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829468][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829468][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829468][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829469][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829469][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829469][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829469][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829470][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829470][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829470][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829471][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829471][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829471][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829471][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829472][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829472][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829472][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829472][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829473][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829473][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829473][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829473][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829474][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829474][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829474][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829475][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829475][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829475][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829475][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829476][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829476][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "AFFX3XIR0JU9NJ5H", "value": "7ec692b7095072f80e01f975e80cad92", "key": "YXW1DQLMIZV0Q91HUK2XWBEDL2165OYN", "type": "put", "leader": "FFFF"} 
+[1608221829476][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829476][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "GK3YBKIHCCN0AZSD", "value": "542272541badc4c56a131613ffd32454", "key": "UZJ1K3NY011HJ347C0A9P743ZQRFXCA1", "type": "put", "leader": "FFFF"} 
+[1608221829477][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "W58AA2FAQOEJ32NE", "value": "97d675a228275ed368af738237d64959", "key": "JK64PFNK1XEN87N7POGP3UKSXOL85L63", "type": "put", "leader": "FFFF"} 
+[1608221829477][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 147, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829477][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829478][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "3ZBRRAIPM5KLIE3I", "value": "d6a90d4a6dd55d22daa96bd9b3cf5c66", "key": "C14K78LKNUIAQYK2Q8NKCEQ1UO1N186L", "type": "put", "leader": "FFFF"} 
+[1608221829478][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "ZXA15AAG06KQ2AEK", "value": "6436368a92b0184017c33e43bb61261a", "key": "3CV7TFAJID21WT2136O8SO2NBR9YMGV6", "type": "put", "leader": "FFFF"} 
+[1608221829478][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "7P32SN5M3W8GSPRQ", "value": "2ee00d473441fbf931fc3fa730246f1f", "key": "8D0LDG08JND2HHBCYCK7Q4L6B5299XK6", "type": "put", "leader": "FFFF"} 
+[1608221829478][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829479][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "WFQVU9SI91XENSBT", "value": "313aa3826189ee0bc4391d7f32ce44ce", "key": "IDA4HMIOCUTZYNGBRMVNE3XVA6IM1X9V", "type": "put", "leader": "FFFF"} 
+[1608221829479][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829479][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "FK6PGCROMMVQU0IF", "value": "12487f9490efebb15fe0f51fd04a65ba", "key": "SF2KSV10BOOTGGUQPLLM4MYRZAAJIVZI", "type": "put", "leader": "FFFF"} 
+[1608221829480][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 155, "type": "rvr", "leader": "0003", "voteGranted": false} 
+[1608221829480][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "KTC12I1IPEB84YKS", "value": "8c232a3a6fac2d0eda09bc16555f648f", "key": "BZ2WFUWTX8HP6IHM0VLLLZDSME4KBM5A", "type": "put", "leader": "0003"} 
+[1608221829480][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "JE2D4400FPELN8A4", "value": "5d75164f14a901c41cbe2a49c07ad181", "key": "Z0MGUGB3354PIAYGC9PL99XAKMS598DR", "type": "put", "leader": "FFFF"} 
+[1608221829480][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "BZNUT7FDEDIQCXHW", "value": "00e87b1d0f6cb9096f8aed245c34ee72", "key": "1ZBFNY6OGADCME7PNB4MIRF4P5WJ1J8Y", "type": "put", "leader": "0003"} 
+[1608221829481][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829481][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "8QJ2NPWRCTP0MNA3", "value": "f0ee4b3b9f0c300bea95b7909f28868c", "key": "C4YJOUW4MVK6ZLHT6ZIATFWTCFHXRHEK", "type": "put", "leader": "0003"} 
+[1608221829481][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "Q9FAMGO1D51IY0IZ", "value": "3cd981c9c56363b1bb83f6cd17b3e0b4", "key": "HWLJSXKSSQTPUKXZOB31JA7N13Z2643R", "type": "put", "leader": "0003"} 
+[1608221829481][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "QLBGTHVSXJG7ZMXU", "value": "4c47c036f6fb6551246a712c164803ad", "key": "S0ED63FMIQ52PIWD42OWUAW5NNSYNOL6", "type": "put", "leader": "0003"} 
+[1608221829482][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "1GZPI18OQF93VRPP", "value": "7dbe3a9d366f5ac5046c015af2a9623f", "key": "1FSYRHMKPZ9O4RKQETNYC34Q68EMUGMM", "type": "put", "leader": "0003"} 
+[1608221829482][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "K0TY8ADZEP0SEGZ6", "value": "1527330562bb67c9001fa866671e6ed1", "key": "BO964UUHM9RLV95T45IFWIBFOBGKCT92", "type": "put", "leader": "0003"} 
+[1608221829482][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829483][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "HOMRS0OOIKINB6CK", "value": "94ab84f0f5b82dad079db2964697a6fc", "key": "7RJKJXIXSH4KSUG20CFFYPIOGOQBC3XT", "type": "put", "leader": "FFFF"} 
+[1608221829483][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "SR1KQT92NTEKD711", "value": "028ab5f98766182770ad20f0d41d2c17", "key": "5G45H1DN6SEEQRH5FCPILXGLA2XFEOYP", "type": "put", "leader": "0003"} 
+[1608221829483][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "941CDYDUMVRTENAQ", "value": "fe1a46490ef53c2ddb03babf9acb309c", "key": "L08WXMLZAXP5GJKNXY7ZHXY1PTRVWKB6", "type": "put", "leader": "0003"} 
+[1608221829483][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "SL2BJOKFDDGROVDW", "value": "83c71384e10e5d55dc33a7b31437dc44", "key": "NNOGPKY23EPQXMKPPQJKQ222DN8CET4A", "type": "put", "leader": "0003"} 
+[1608221829484][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "0TL1FV4APTNO97SX", "value": "e800070ecbc361b29a99a6a295344a6f", "key": "5QI5I6TYMGRF8A7QWU08710CERRG9M9A", "type": "put", "leader": "0003"} 
+[1608221829484][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829484][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "51HKDNSO7MNKTWGY", "value": "0f2790c125496230380a0208e815e11c", "key": "INX3RSUSCF381EI6BUX2GJWVRJF2GRFP", "type": "put", "leader": "0003"} 
+[1608221829485][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "92BWD3IFFV0EPJP3", "value": "e106b5d8ef93b6d3a316d198ba65f7d0", "key": "CJ73NSVCQWE6V9BGNCCP2INOPAO1QLG3", "type": "put", "leader": "0003"} 
+[1608221829485][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "2OMITRSC6AKIX3EZ", "value": "004551cc1a9e4010cb2c6ffa50f9507e", "key": "D6YPS3FYYTU3NYTS93IM7JMOT5YCY15N", "type": "put", "leader": "FFFF"} 
+[1608221829485][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "LBF3KZC5OB9BWZ31", "value": "6dbab4752a47bbde807d966b926086d5", "key": "S9YI2RG5YYUFFVCB7DSYA2PU2KK8CU2A", "type": "put", "leader": "0003"} 
+[1608221829485][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "EK04PN9K2LFYL17U", "value": "a0e139571cab3d35384cb1495f3ae76e", "key": "RFVZP9LQL0TC6RKYXOU41WG2E5JXOR1R", "type": "put", "leader": "0003"} 
+[1608221829486][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829486][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "JSA0188OHI4KYJ04", "value": "b6c7ab964de2d87d5ab8cd4e6fe3bdec", "key": "NKVKGUEQJ36GZQVGUJDT00NI02I4P5PD", "type": "put", "leader": "0003"} 
+[1608221829486][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "GQ41HH909L0RZ577", "value": "4f87238ffc82c0931dc963cede78ef3a", "key": "7RCTOLV643DU6OREZSCWG5C6U9T6QSDP", "type": "put", "leader": "0003"} 
+[1608221829486][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "3KX0A3Y7BYDB7UXC", "value": "259f1afc4831c4c43fe0b22985745511", "key": "8XR0P9A7O7MPXWI1MFBAGJVS7QH4XN11", "type": "put", "leader": "0003"} 
+[1608221829487][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "NDG7K24SFGWWC2DN", "value": "7ad35120f266e6ef9d5291dae0eac390", "key": "4DPZHPOTOY75ODOMC7YGDG3C6GR3F9QM", "type": "put", "leader": "FFFF"} 
+[1608221829487][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "5GHQK5MEH8AG0HBN", "value": "a7ff1596d60d90660559dc7366aab10d", "key": "P03DX0O4YVIO1JPB08ZB7LZYQXFMILAI", "type": "put", "leader": "0003"} 
+[1608221829487][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829488][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "TNQJUR63P86KQTN4", "value": "47437265ba00143c9a9f1284ea535fea", "key": "8K73LQCDJCOKRTU9G9OZIBFYZ39MY9SO", "type": "put", "leader": "0003"} 
+[1608221829488][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "QJP2XGRTOYUEF97O", "value": "16267fb5f12acbf99e1b9690ffbdcada", "key": "7DHXWK1T6AT5LDBAK7V1H70J2VVMMTB6", "type": "put", "leader": "0003"} 
+[1608221829488][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "D29ES4O6WUGBRN28", "value": "1ef8e125018b75cec5bddeac507a0d52", "key": "WJ6LURRK4EXM82QQYQJWLDTJW3IRDTX3", "type": "put", "leader": "0003"} 
+[1608221829488][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "GVEHAUS7ZPW3XZLO", "value": "aca45069a7d136b268f1ce4d46aa772b", "key": "4ONJJ51GDA2IZ1J5T9764AM98RQO156V", "type": "put", "leader": "0003"} 
+[1608221829489][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "FNW3FI3RE3GGUQTC", "value": "b59f7cdfe8c5b3a7e69173ca0182b730", "key": "SSLKJWPBY42A7K0CVO215LMC2M0FK4KU", "type": "put", "leader": "0003"} 
+[1608221829489][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829489][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "WR74IW5EFKEOLJFG", "value": "7ca09b409a705c8e38664efa7dd4c474", "key": "62L9JX2D8P5V5C3VCADYMBZICPEAQ4J6", "type": "put", "leader": "0003"} 
+[1608221829489][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "W1CKDINUFBD48DOI", "value": "cf9b560e670f81dc35832a77cce7969b", "key": "LA2UUQZQ5ZXG3PGRAPWE50H80BI25SW4", "type": "put", "leader": "0003"} 
+[1608221829490][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "17ARIP601XUGHC55", "value": "49a826f234cb39299a9095f8fcf08ce8", "key": "7OM6X1B39K0NMWHNEJAA4YJ5OCK9PYWP", "type": "put", "leader": "0003"} 
+[1608221829490][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829490][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "W0ZR483QF3L33LLK", "value": "3bd4de58c3d06a6808034dc6ad5cf29e", "key": "KVQ0EWVVF36MPDV3ZVKB2ALIL33005M9", "type": "put", "leader": "0003"} 
+[1608221829491][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "2LVXGRCAL7VSU1QU", "value": "6063d9d7fde684384c7efa3d01b10893", "key": "HHUZTMXWPFI8X6IVEHEPRDHUB4VM8DCL", "type": "put", "leader": "0003"} 
+[1608221829491][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "PWYFFR99T3YH2BVI", "value": "1b5a81ce2b702bc73a6e65c310657f98", "key": "K3PGTH824N89WUBOUU1ORH9UMM35PC9V", "type": "put", "leader": "0003"} 
+[1608221829491][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829491][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "AG3E0YIFGNXOOPIO", "value": "fad148cc6b5d25f6d28f4911381addd7", "key": "PTLKJAKQL0Z0ACXLF96MT091VTUL06T7", "type": "put", "leader": "FFFF"} 
+[1608221829492][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "NBUYX60K79KVWL96", "value": "98c064d6da7a059d69708f2ae4e37c51", "key": "4DCGYVDXNK5NSBNV5D4TL30V05ZWCD27", "type": "put", "leader": "0003"} 
+[1608221829492][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "PQP4W6I5E6E1JE8Z", "value": "236d0fadc49e6af79aabe160139a156e", "key": "58JJUA6TV9CA7TP4F5O4FVIZP059OY6G", "type": "put", "leader": "0003"} 
+[1608221829492][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829493][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "JMP85WHQSG5QTCFK", "value": "1e96aec2d81c1f2828b6702e93cfb6ef", "key": "WLY5V8R1FXW3MNZYWACUK4X5F9Z9JR8B", "type": "put", "leader": "FFFF"} 
+[1608221829493][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "AUAY0M5YVD8NT1KE", "value": "8e92f0a0d1ebde1ca55ea7fb7e3d5d21", "key": "CZ5B720GN9LCRLJOQS70TX8BLP1M2FDF", "type": "put", "leader": "0003"} 
+[1608221829493][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "285NJL2E1L4DB1W1", "value": "8eb099eee73b5cb608057320b1f43f47", "key": "9QE0V3Q6DE9MWZ4CMAPDUPKJL6L4E4BF", "type": "put", "leader": "0003"} 
+[1608221829493][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "541BY77RWB5TL1BR", "value": "addb7b8c1736f9b48faabfc26e4671b0", "key": "WIYVS9T95MXHP3REHYD8NV7LVC8RBMZD", "type": "put", "leader": "FFFF"} 
+[1608221829494][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "EU82E26NNQAP0M55", "value": "95e064f3442cf9cdb7d7b1125206e519", "key": "DXZM5JOC1UQSUJVE9EM77GN23V7DIJK6", "type": "put", "leader": "0003"} 
+[1608221829494][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829494][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "6MI5FYMQUYRDQYHE", "value": "681c274689ee10eaf655e5ca09e9c726", "key": "REV8DB0VQ0FH10PFYHAGE869FSF4AC9D", "type": "put", "leader": "FFFF"} 
+[1608221829494][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "7YBTC4FO2QWNFFF2", "value": "b866bbdba55cd1a51f4985ad786d6300", "key": "9SERCJ3KZODTP02JEPYNBKJSMESZWKRZ", "type": "put", "leader": "0003"} 
+[1608221829495][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829495][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "EWL5YV3N26F5UBAY", "value": "59e931a0ca7608dc886b1c66b4924035", "key": "1CPC95RM3AXT560A40CKTRLCQWFOB8UR", "type": "put", "leader": "0003"} 
+[1608221829495][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "OZFRPVRMG5QG1C0Z", "value": "54d968dedd1bc8123f6704d660f7a0eb", "key": "QB63PMNRRI5IK1K8AVC5ZPLOI5EHRYZJ", "type": "put", "leader": "0003"} 
+[1608221829496][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829496][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "O8L4WK88H3WAPWHB", "value": "15384af6c346ad8c44be9de5ed6aa8d9", "key": "9KSOX90XQQLAASYHRFVJNA458100CH29", "type": "put", "leader": "0003"} 
+[1608221829496][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 151, "type": "rvr", "leader": "FFFF", "voteGranted": false} 
+[1608221829496][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "8SYI7C58F2AI5BH6", "value": "386fcc1fc212fdfb48d75028a06cf493", "key": "WWHP1G019W7TOKTHXOSYDPSP4BML1Q3R", "type": "put", "leader": "0003"} 
+[1608221829497][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "WSB6XWB7AV96YRIV", "value": "9a33b6fde52d99d73603f9fb7967a451", "key": "O960TVHUFPN3K8QFHYYLK5IFMH9ESLY5", "type": "put", "leader": "0003"} 
+[1608221829497][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "ISLJVYI72UEYSN0R", "value": "4a05e27b4fadb75ffed5ede28164760c", "key": "6OI12MK5CHFUNO5UL746NWTBMMPDB7D5", "type": "put", "leader": "FFFF"} 
+[1608221829497][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "NJ696YNBILLP974E", "value": "0cbba6a6e7dc8f0fd1752168948cdb69", "key": "VDR8D85FI855QIXC7YM0ONGJGM5RTN0P", "type": "put", "leader": "0003"} 
+[1608221829497][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "1O1K9HHVT5EWAEJ3", "value": "4102998858ba9ebfe355b07305b61be3", "key": "1GLNOTRQUPU1RON6TVZ49U9LDWGZPUJZ", "type": "put", "leader": "0003"} 
+[1608221829498][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "K7P1MXTOH0UVITGR", "value": "b29c9d39731619f742d63565c987d3e0", "key": "AZEZLB3TLQHYRHS3GJKE47X8JKOEDLI1", "type": "put", "leader": "FFFF"} 
+[1608221829500][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "U1YZNIX3NSSWJMVW", "value": "9a04cf71caa9f6e64bc46aee5a00f683", "key": "OZRRGAMRZMDHSFUS0AIPID06XDAMED4Z", "type": "put", "leader": "FFFF"} 
+[1608221829501][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "L76KPP08BCY7HA0I", "value": "c1667a56c2226f39cee29f6bcfe38d8d", "key": "TRLZQ5DCRKGTNJYS5SSX0Z8ZR7MCLL7Q", "type": "put", "leader": "FFFF"} 
+[1608221829501][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "BKEDYU00H4RSW1GB", "value": "5e83a256f5a7943648e8690546dab260", "key": "0DJ7H66WQHXIQGVV51PLVD7LWSCBMGW8", "type": "put", "leader": "FFFF"} 
+[1608221829502][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "6YEHICHL3Z1V0464", "value": "ea2f6f15b886b3a8287026f99e897fb4", "key": "NLWC98IYSMHBRMXJ3Q11WMLB5GG3Q5NE", "type": "put", "leader": "FFFF"} 
+[1608221829502][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "E7XQGVHU6WVCK9IH", "value": "4711136feb5ddb11ec77f652e3c433be", "key": "4K8Z7HAGEHF0S6HR2JTDUH7Y1VMKRFJJ", "type": "put", "leader": "0003"} 
+[1608221829502][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "EVYHHGL8LC4XOHPG", "value": "53eb6ce096f68ff16cd09ee3414ffcb2", "key": "EE23C87ITG7A6Z2V7JHBBI1RT3MFJ0K3", "type": "put", "leader": "FFFF"} 
+[1608221829503][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "EVW2BNBU91TR8THL", "value": "ea2a74b4055c59ddea8e0c699ce9334b", "key": "1REQU1CUFX82P7EXFPHJAZZ9H9HGP3G1", "type": "put", "leader": "FFFF"} 
+[1608221829503][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "DT1DNHWBFEAWXCLG", "value": "077a300e33b2fa4665db6ee576ae7d36", "key": "LHOE5O3HNFKFN4RLTSXRJCH16F0EC33J", "type": "put", "leader": "FFFF"} 
+[1608221829503][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "OFB5YZOUBH5YAC6H", "value": "e3fd08ff7a01c1093b9036ae2c137639", "key": "M6VL1KAG4VGRKU1ANXU5UKD0Y2RZA4BA", "type": "put", "leader": "FFFF"} 
+[1608221829504][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "AJ538FO48CXOMW9F", "value": "ffed0e906f06b3735f54100ac428d157", "key": "EE21A1FWV6EGJVDMM4GW5I5WA837YPCW", "type": "put", "leader": "0003"} 
+[1608221829504][Host: 0003] HOST RECEIVED: {"src": "0000", "dst": "0003", "term": 155, "type": "rvr", "leader": "0003", "voteGranted": false} 
+[1608221829504][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "61XQ29X952OLK4NB", "value": "e8f7617a8847bb3a0e5c0439dfd5b338", "key": "3XBOIIH9B0GA6O6BMZ5J075C2QLUSH4X", "type": "put", "leader": "0003"} 
+[1608221829504][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "5PO4GSP47Q055DZG", "value": "05ed459fbe7feb920d7167acb8026937", "key": "IGYI6ZUX1BQKLZO57TIPHBM7AD6QAA5S", "type": "put", "leader": "FFFF"} 
+[1608221829505][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "7SE6VI6XBBUSJSQ2", "value": "ded1c87d6f1947154b358cad1a25627b", "key": "K7BV26C6NKVQ4C2OSUC80CIOI3OD8DJN", "type": "put", "leader": "0003"} 
+[1608221829505][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "EM71T8ZKSCFM3KPO", "value": "3860511e809de8b9de37b291cea447a2", "key": "45LALR5ANB19JN7EQRQQX66NU4JBFXS9", "type": "put", "leader": "0003"} 
+[1608221829505][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "WUCM73AZK6QZ9SBY", "value": "72dadcf22295586582713f4a93926b32", "key": "U23BSKOMJYFM42L4K0SFX87KMSYKTSOO", "type": "put", "leader": "0003"} 
+[1608221829506][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "P25XT3U64PNQK6YR", "value": "99ee11083329e8dc720a019e4f805408", "key": "MZACI7CKB2RQJG5LPBO2OBZUF6D6III4", "type": "put", "leader": "0003"} 
+[1608221829506][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "5TKNACTU731FZI3E", "value": "3fdb4fbba8a33f78654a2b2d1197ab70", "key": "IUU4GGCL6QS3LNCNPWB9ZRHQETIIC6LV", "type": "put", "leader": "FFFF"} 
+[1608221829506][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "EPIUQ5L3WXFQNNNX", "value": "55e22337f16732b079ee1b26fa25c36b", "key": "2PJKXCITGC1E7ORCPYPGJYFD2IRMEAXR", "type": "put", "leader": "0003"} 
+[1608221829506][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "23ELKMAYXVBRYX5C", "value": "d57b3ef7e183f04c02c8e7da0b338ec2", "key": "IJ5717F306LC1A8U72Z2L5O9VZ7RXRGE", "type": "put", "leader": "0003"} 
+[1608221829507][Host: 0003] HOST RECEIVED: {"src": "0016", "dst": "0003", "MID": "XAS9I1HP4PI5DH9H", "value": "dc485b1085d3feab821942f7d11c3167", "key": "RGNEBVK7XVYKD4I48UJ8GGHK4V3YYBPE", "type": "put", "leader": "0003"} 
+[1608221829507][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "SKOZDVSBE9875B7R", "value": "098b08e2b7025ea9c6322644f1ee1657", "key": "8L4Q04YTCZDNQ9EGYJ8Z1NDWBHSHM6NK", "type": "put", "leader": "0003"} 
+[1608221829507][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "S9U6ALPQTYMCGA6X", "value": "c358ffe9a45140d0302e9a9efe0688d6", "key": "SY6JAI0X2UU7WX50UWR5GVCIWMGD141J", "type": "put", "leader": "FFFF"} 
+[1608221829508][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "P7UEMJYQWC4KFFPH", "value": "70074c58e3c922f7cd2b2f60082e71dc", "key": "YYPLE99B42EUQF1JTI342H3JCSRZ1PR6", "type": "put", "leader": "0003"} 
+[1608221829508][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "XAH2QVUKQOH7E81C", "value": "3aa59166bf50465f76d5be0aa07e0d6f", "key": "565MCSCA4H5L7GWG6IB2B8SZPHWPTF64", "type": "put", "leader": "0003"} 
+[1608221829508][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "H3YNIMXYIO7AGAUC", "value": "f69c43b35e51f769e5a00e7030635681", "key": "RNSDKD1ZGN0LMB9YU0UMVVUI7AB2X2K5", "type": "put", "leader": "0003"} 
+[1608221829508][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "AQ9LXDQ3H1H9PYN2", "value": "36ed433b05f93ad984f41d0fa5c47228", "key": "JMEHM7N4EV1MXBQPOB1C5X27M4J64HAP", "type": "put", "leader": "0003"} 
+[1608221829509][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "FVS1FV6CI8ABK4LB", "value": "10bdddee44150f733cf4b3151eb08f9b", "key": "JLFPRZE38N1D53URHJ5JG4OGW8VVMHUG", "type": "put", "leader": "0003"} 
+[1608221829509][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "J05W1L020EY4151F", "value": "bd7cb4f03099f190bafb373118d6b8e3", "key": "37QYAB0UW0DBNXOYEKHIOL1N9CNGGUWC", "type": "put", "leader": "0003"} 
+[1608221829509][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "CR9Y5L8XCQNQ0VLJ", "value": "7b6611f317fb95f730c731772d2494b7", "key": "8JU9SOURL0K0EOFLEARJQOLBNPNOUE4Q", "type": "put", "leader": "0003"} 
+[1608221829509][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "YNOQCXEXG94E5EUE", "value": "0314f93ea9000ca64a94b2f7cac01cc3", "key": "I0J7NUD3SQVLDPKTA8YFBI75QJFSFI4N", "type": "put", "leader": "0003"} 
+[1608221829510][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "MKUQBUKYAIFR96TS", "value": "93bd60d38881b19525d5fb86d2bb75fd", "key": "DLJI1PKBX3S2KXCM7R4AGOTQ22HJ0KEX", "type": "put", "leader": "0003"} 
+[1608221829510][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "Z47LC90GHGNFYM8D", "value": "de35b613522d784cf808eb0ac0a65b31", "key": "VM22CBDWHEKY5FZYFKD1HSH3HD3Z82LH", "type": "put", "leader": "0003"} 
+[1608221829510][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "Z7F6UMT7KTQHQY5P", "value": "2f40130383db2d582b5c6efacdb27340", "key": "DGYHUY6I7TD4E8TDWXBI0VXPEZ0T28M4", "type": "put", "leader": "0003"} 
+[1608221829510][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "54ET7WGVMGBX7TXE", "value": "5e095a4bb9f54ba2f9efc2b7e9fb9ef4", "key": "TA3T1CLN1ZKPT3O72CNU4HWKZZCN9WRU", "type": "put", "leader": "0003"} 
+[1608221829511][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "4W2HABIYWIE6I5N5", "value": "19d8c29519a0835f7cf42c3cab4ed495", "key": "9CML25SVKENAFK5LMLYYEHS0772GWUT8", "type": "put", "leader": "0003"} 
+[1608221829511][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "LXZX6V1FU1X4IS6S", "value": "31183a4b371b7591558f40969905f349", "key": "6XE7QRQ2DVP3QQ4C4VXICPT1B1NWSCOH", "type": "put", "leader": "0003"} 
+[1608221829511][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "Q85YYDUCB5Y28NRD", "value": "c58fb1181beeb6f566f30a0c18f0f671", "key": "XPOIZ1NR06JBEONO6879GRGI5LLTCQAJ", "type": "put", "leader": "0003"} 
+[1608221829512][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "YH7V4BTOQZ9LITI9", "value": "dfeeb4207a975fecb81fc8e8bb97c093", "key": "ND7JQ7SHHH2GJLUE6L7LSVFT01C5UTV2", "type": "put", "leader": "0003"} 
+[1608221829512][Host: 0003] HOST RECEIVED: {"src": "001B", "dst": "0003", "MID": "OBFZ83PB4S09ONQE", "value": "5cd8057bc71f7bbba05a9e714c280947", "key": "W8LIUVK7UXM8Z4VNW1Y1D9W6ZKDEII9R", "type": "put", "leader": "0003"} 
+[1608221829512][Host: 0003] HOST RECEIVED: {"src": "0017", "dst": "0003", "MID": "JELRSQTCX32YQNA9", "value": "1bd58f3f1fd2df704b2af0098173abad", "key": "H6AD9SPBZKOCJCKWRKWWUED7GZ1FX3XO", "type": "put", "leader": "0003"} 
+[1608221829512][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "M18U0Z76UPWSF5ZR", "value": "b7edf2b7a405470531e10ea0e2ab5134", "key": "WHO14NLXS9TKRXP7VPKT8JZK04UB798T", "type": "put", "leader": "0003"} 
+[1608221829513][Host: 0003] HOST RECEIVED: {"src": "0018", "dst": "0003", "MID": "O6ESUK5DHP8QTYZ9", "value": "d82bda101869aea94224c817186f1fe6", "key": "S1GRBWU883IF2GVZA86GAEPQ538CBTGU", "type": "put", "leader": "0003"} 
+[1608221829513][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "AASQ7KK3TZ2C9OMI", "value": "025bba0f0f5d645a09fee09b71a9b356", "key": "J6TC6NJ84ZXJSQYK5JFH8FA6FXJ5CQX3", "type": "put", "leader": "0003"} 
+[1608221829513][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "0JORHVVVI1IK3OPG", "value": "c82423bc9a2c04029d5ec5aa55f9a96c", "key": "YZZFQRZKKCTYL6FPCZU9HZ0TSBQFMBC9", "type": "put", "leader": "0003"} 
+[1608221829513][Host: 0003] HOST RECEIVED: {"src": "0019", "dst": "0003", "MID": "1IUW96WXJ0TCRRKH", "value": "6a336d02cc870cd53edd762e5149e5be", "key": "OJSS1Y3RFP8C46EQA3I0MKBBDFHQJVWK", "type": "put", "leader": "0003"} 
+[1608221829514][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "MSFEVHADDKBYU8C6", "value": "77b907e8799a907e6a59c9b5e4a22551", "key": "F5J0915KKQ5B7EUZDYNH2U9WS4VM4S32", "type": "put", "leader": "0003"} 
+[1608221829514][Host: 0003] HOST RECEIVED: {"src": "001A", "dst": "0003", "MID": "0JV8F6NF3N7R49A6", "value": "1ec80f4f02cd1f49442a7ba781e620e0", "key": "1AW8EO6RWVEZELIVINMIJIV6Z6Q5CEXE", "type": "put", "leader": "0003"} 
+[1608221829514][Host: 0003] HOST RECEIVED: {"src": "0004", "dst": "0003", "term": 156, "type": "rvr", "leader": "0003", "voteGranted": false} 
+[1608221829515][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "7SJK4JDB2N389V2T", "value": "fa50d75c72b0b653a1b0164b7bf83e04", "key": "0N46DJT3BHCM0PI62BT3FMESW37JEQEO", "type": "put", "leader": "0003"} 
+[1608221829515][Host: 0003] HOST RECEIVED: {"src": "001C", "dst": "0003", "MID": "W91L8DUQFJMHK6CN", "value": "a82c9b29e97e8216b66519ca97ed33a4", "key": "F4IX7D1J4ULBN2Z90NH7ZBUXYR038GES", "type": "put", "leader": "0003"} 
+[1608221829515][Host: 0003] HOST RECEIVED: {"src": "0015", "dst": "0003", "MID": "81IXB982XOFHLP32", "value": "3b3aa5461e30bdcb9e44162d0263f041", "key": "AQ7XXYQ4EC46FQ5EJHB4CPMDCIY8SACM", "type": "put", "leader": "0003"} 
