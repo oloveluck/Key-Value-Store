@@ -3,7 +3,7 @@
 import sys, socket, select, time, json, random, asyncio, math
 from typing import List, Dict
 
-DEBUG = True
+DEBUG = True 
 
 class State:
     id: str
@@ -53,10 +53,11 @@ class ServerRPC(RPC):
         self.term = term
         
     def handleMessage(self, server):
-        if self.term > server.state.currentTerm:
+        if self.term > server.state.currentTerm: # if message term is greater than the server's term
             server.state.currentTerm = self.term
+            server.state.votedFor = None
             server.changeController("follower")
-            server.state.leader_id = self.dst
+            # server.state.leader_id = self.dst
             print(server.state.id, " changed to a follower")
 
 class RPCFactory:
@@ -71,7 +72,7 @@ class RPCFactory:
         elif msg['type'] == 'aer':
             return AppendEntriesResponse(msg['src'], msg['success'], msg['term'], msg['matchIndex'])
         elif msg['type'] == 'rvr':
-            return RequestVoteResponse(msg['src'], msg['voteGranted'], msg['term'])
+            return RequestVoteResponse(msg['src'], msg['term'], msg['voteGranted'])
         elif msg['type'] == 'get':
             return Get(msg['src'], msg['key'], msg['MID'])
         elif msg['type'] == 'put':
@@ -129,21 +130,22 @@ class Put(ClientRPC):
         self.value = value
 
     def handleMessage(self, server):
-        if server.controller.name != 'leader':
+        if server.controller.name == 'leader':
+            server.state.log.append({ 
+                'entryType': 'put', 
+                'term': server.state.currentTerm,
+                'index': len(server.state.log), 
+                'data': {
+                    "key": self.key, 
+                    "value": self.value, 
+                    'MID': self.MID, 
+                    'src': self.dst
+                }
+            })
+            # server.controller.restartHeartbeat() # Sends one at a time? No batching?
+        else:
             ## forward message to the leader
             return [ForwardMessage(self.dst, self.MID)] 
-        server.state.log.append({ 
-            'entryType': 'put', 
-            'term': server.state.currentTerm,
-            'index': len(server.state.log), 
-            'data': {
-                "key": self.key, 
-                "value": self.value, 
-                'MID': self.MID, 
-                'src': self.dst
-            }
-        })
-        return None
 
 class PutResponse(ClientRPC):
     def __init__(self, dst: str, mid: str, MID: str, key: str):
@@ -183,14 +185,14 @@ class AppendEntriesResponse(ServerRPC):
                 if majorityCommitted > server.state.commitIndex:
                     oldCommitIndex = server.state.commitIndex
                     server.state.commitIndex = majorityCommitted
+                    server.controller.applyRules()
                     responses = []
                     for entry in server.state.log[oldCommitIndex:server.state.commitIndex]:
                         data = entry['data']
-                        server.data[data["key"]] = data["value"]
                         responses.append(GetResponse(data['MID'], data['src'], data['key'], data['value']))
                     return responses
         else:
-            server.state.nextIndex[self.dst] = max(server.state.nextIndex[self.dst], 0)
+            server.state.nextIndex[self.dst] = max(server.state.nextIndex[self.dst] - 1, 0)
 
     def toJSON(self, src, leader):
         return json.dumps({
@@ -219,22 +221,28 @@ class AppendEntries(ServerRPC):
         """
         Handles an AppendEntries RPC and Sends a Response
         """
-        if server.controller.name == "leader":
-            raise Exception("Leader received an append entries")
-        server.controller.restartElectionTimeout()
+        if (server.controller.name == 'candidate' and self.term >= server.state.currentTerm):
+            server.changeController('follower')
         super().handleMessage(server)
-        term_match: bool = server.state.currentTerm >= self.term
-        entry_match: bool = self.prevLogTerm is None or (len(server.state.log) != 0 and self.prevLogTerm == server.state.log[self.prevLogIndex]['term'])
+        if server.controller.name == "leader":
+            print("Leader received an append entries")
+            return None
+        term_match: bool = self.term >= server.state.currentTerm
+        if term_match: 
+            server.controller.restartElectionTimeout()
+            server.state.leader_id = self.dst
+        entry_match: bool = self.prevLogTerm is None or (len(server.state.log) > self.prevLogIndex and self.prevLogTerm == server.state.log[self.prevLogIndex - 1]['term'])
         success = term_match and entry_match
 
-        if success and server.controller.name == "follower": #TODO revisit when concerned about mismatched logs 
-        #     if server.state.commitIndex > self.prevLogIndex: # if this server's log is different from leaders
-        #         server.state.log = server.state.log[:self.prevLogIndex] # remove all different
+        if success and server.controller.name == "follower": 
+            if server.state.commitIndex > self.prevLogIndex: # if this server's log is different from leaders
+                server.state.log = server.state.log[:self.prevLogIndex + 1] # remove all different
             server.state.log += self.entries # add all from leader
-            server.log("Follower Log: " + json.dumps(server.state.log))
             if self.leaderCommit > server.state.commitIndex: # raft paper: AppendEntries: #5
                 server.state.commitIndex = min(self.leaderCommit, len(server.state.log))
-        return [AppendEntriesResponse(self.dst, success, self.term, len(server.state.log))]
+
+            server.event_loop.call_soon(server.controller.applyRules)
+        return [AppendEntriesResponse(self.dst, success, server.state.currentTerm, len(server.state.log))]
 
 class RequestVoteResponse(ServerRPC):
     """
@@ -250,6 +258,7 @@ class RequestVoteResponse(ServerRPC):
         super().handleMessage(server)
         if server.controller.name == 'candidate' and self.voteGranted:
             server.controller.votesReceived += 1
+            server.log("VoteGranted: " + str(self.voteGranted) + " VotesReceived: " + str(server.controller.votesReceived))
             if(server.controller.votesReceived > server.majority):
                 server.changeController('leader')
 
@@ -273,18 +282,30 @@ class RequestVote(ServerRPC):
         self.dst = candidateId
         self.candidateId = candidateId
         self.lastLogTerm = lastLogTerm
+        self.lastLogIndex = lastLogIndex
 
     def handleMessage(self, server) -> RequestVoteResponse:
         """
         Handles a Request Vote Message
         """
         super().handleMessage(server)
+
+        serverLastLogTerm = server.state.log[-1]['term'] if server.state.log else 0
+        length = len(server.state.log) if server.state.log else -1
+        #termCheck = server.state.log[self.lastLogIndex - 1]['term'] if server.state.log else 0
+        termCheck = self.lastLogTerm > serverLastLogTerm
+        indexCheck = self.lastLogTerm == serverLastLogTerm and self.lastLogIndex >= length
+        upToDate = termCheck or indexCheck
+        server.log("| TermCheck: " + str(termCheck) + "| IndexCheck: " + str(indexCheck) + "| UPTODATE: " + str(upToDate))
         voteGranted = self.term >= server.state.currentTerm \
-            and (server.state.votedFor in [None, self.candidateId]
-                and (self.lastLogTerm is None or self.lastLogTerm == server.state.log[-1]["term"]))
+            and server.state.votedFor in [None, self.candidateId] \
+                and upToDate
         if voteGranted:
             server.controller.restartElectionTimeout()
-        return [RequestVoteResponse(self.candidateId, server.state.currentTerm, voteGranted)]
+            server.state.votedFor = self.candidateId
+        resp = RequestVoteResponse(self.candidateId, server.state.currentTerm, voteGranted)
+        server.log("sending RVResponse" + resp.toJSON(server.state.id, server.state.leader_id))
+        return [resp]
 
 class Controller:
     name: str
@@ -300,14 +321,15 @@ class Controller:
     def restartElectionTimeout(self):
         if self.election_timeout is not None:
             self.election_timeout.cancel()
-        timeout = random.randint(60, 150) / 1000
+        timeout = random.randint(150, 300) / 1000
         self.election_timeout = self.server.event_loop.call_later(timeout, self.server.changeController, "candidate")
         
 
     def applyRules(self):
-        if self.server.state.commitIndex > self.server.state.lastApplied:
+        #print("Applying from " + str(self.server.state.lastApplied) + " to " + str(self.server.state.commitIndex) + " log size: " + str(len(self.server.state.log)))
+        while self.server.state.commitIndex > self.server.state.lastApplied:
             self.server.state.lastApplied += 1
-            toAdd = self.server.state.log[self.server.state.lastApplied]["data"]
+            toAdd = self.server.state.log[self.server.state.lastApplied - 1]["data"]
             self.server.data[toAdd["key"]] = toAdd["value"]
             
 class Leader(Controller):
@@ -329,12 +351,12 @@ class Leader(Controller):
             self.heartbeat.cancel()
         #self.server.log("Leader LOG: " + json.dumps(self.server.state.log))
         [self.server.event_loop.create_task(self.sendAEMessage(replica)) for replica in self.server.state.replicas]
-        timeout = random.randint(30, 50) / 1000
+        timeout = random.randint(50, 60) / 1000
         self.heartbeat = self.server.event_loop.call_later(timeout, self.restartHeartbeat)
 
     async def sendAEMessage(self, replica_id):
         nextIndex = self.server.state.nextIndex[replica_id] - 1
-        self.server.event_loop.sock_sendall(self.server.sock, json.dumps({
+        await self.server.event_loop.sock_sendall(self.server.sock, json.dumps({
             "type": "ae",
             "term": self.server.state.currentTerm,
             "src": self.server.state.id,
@@ -343,7 +365,7 @@ class Leader(Controller):
             "entries" : self.server.state.log[nextIndex: nextIndex + 50], # TODO batch
             "leaderCommit" : self.server.state.commitIndex,
             'prevLogIndex': nextIndex - 1,
-            'prevLogTerm': self.server.state.log[nextIndex - 1]['term'] if nextIndex > 0 and self.server.state.log else None 
+            'prevLogTerm': self.server.state.log[nextIndex - 1]['term'] if nextIndex > 0 and len(self.server.state.log) >= nextIndex else None 
         }).encode())
 
     def restartElectionTimeout(self):
@@ -354,23 +376,23 @@ class Candidate(Controller):
     
     def __init__(self, server) -> None:
         super().__init__("candidate", server)
-        server.log("Became a Candidate")
         self.server.state.leader_id = 'FFFF' # TODO is this necessary
         self.server.state.currentTerm += 1
+        server.log("Became a Candidate at term " + str(server.state.currentTerm))
         self.server.state.votedFor = self.server.state.id
         self.votesReceived = 1
         [self.server.event_loop.create_task(self.sendRV(replica_id)) for replica_id in self.server.state.replicas]
         self.restartElectionTimeout()
 
     async def sendRV(self, replica_id):
-        self.server.event_loop.sock_sendall(self.server.sock, json.dumps({
+        await self.server.event_loop.sock_sendall(self.server.sock, json.dumps({
             'src': self.server.state.id,
             'dst': replica_id,
             'leader': self.server.state.leader_id,
             'term': self.server.state.currentTerm,
             'type': 'rv',
             'lastLogIndex': len(self.server.state.log) - 1,
-            'lastLogTerm': self.server.state.log[-1]['term'] if self.server.state.log else None
+            'lastLogTerm': self.server.state.log[-1]['term'] if self.server.state.log else 0
         }).encode())
 
 class Follower(Controller):
@@ -393,7 +415,7 @@ class Server:
         if DEBUG:
             message = f'[{round(time.time() * 1000)}][Host: {self.state.id}] {message} {"[To: " + dest + "]" if dest else ""}\n'
             self.logFile.write(message)
-            print(message)
+            #print(message)
 
     def __init__(self, my_id, replicas, sock):
         self.state = State(my_id, replicas)
@@ -420,12 +442,14 @@ class Server:
                 for resp in responses:
                     if resp.msg_type == 'redirect':
                         self.log("Forwarding message to " + resp.dst)
-                    self.event_loop.sock_sendall(self.sock, resp.toJSON(self.state.id, self.state.leader_id).encode())  
+                    self.sock.send(resp.toJSON(self.state.id, self.state.leader_id).encode())  
         asyncio.get_event_loop().create_task(self.receive())
 
     def changeController(self, controller_type: str):
         if self.controller.election_timeout is not None:
             self.controller.election_timeout.cancel()
+        if self.controller.name == 'leader' and self.controller.heartbeat is not None:
+            self.controller.heartbeat.cancel()
         if controller_type == "candidate": # TODO check if the candidate is up to date:
             self.controller = Candidate(self)
         elif controller_type == 'follower':
