@@ -58,7 +58,7 @@ class ServerRPC(RPC):
             server.state.votedFor = None
             server.changeController("follower")
             # server.state.leader_id = self.dst
-            print(server.state.id, " changed to a follower")
+            #print(server.state.id, " changed to a follower")
 
 class RPCFactory:
     def BuildMessage(self, msg) -> RPC:
@@ -321,7 +321,7 @@ class Controller:
     def restartElectionTimeout(self):
         if self.election_timeout is not None:
             self.election_timeout.cancel()
-        timeout = random.randint(150, 300) / 1000
+        timeout = random.randint(150, 200) / 1000
         self.election_timeout = self.server.event_loop.call_later(timeout, self.server.changeController, "candidate")
         
 
